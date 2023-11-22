@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="txt_title" parent="TextAppearance.AppCompat">
+
+        <item name="android:textColor">@color/txt</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:textAlignment">center</item>
+
+    </style>
+</resources>
