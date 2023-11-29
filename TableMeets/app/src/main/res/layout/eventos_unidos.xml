@@ -52,7 +52,7 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="102dp"
-            android:src="@drawable/eventos_creados" />
+            android:src="@drawable/eventos_unidos" />
 
         <TextView
             android:layout_width="match_parent"
@@ -60,7 +60,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/montserrat_medium"
             android:gravity="center_horizontal"
-            android:text="Eventos creados"
+            android:text="Eventos unidos"
             android:textSize="22sp" />
 
         <androidx.recyclerview.widget.RecyclerView
