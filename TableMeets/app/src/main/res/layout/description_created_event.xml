@@ -40,7 +40,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="556dp"
+        android:layout_height="548dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="40dp">
@@ -62,53 +62,44 @@
             android:layout_marginTop="22dp"
             android:fontFamily="@font/montserrat_medium"
             android:gravity="center_horizontal"
-            android:text="Juegos"
+            android:text="Cargando evento ..."
             android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
-            android:layout_width="328dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="55dp"
+
+        <ScrollView
+            android:layout_width="326dp"
+            android:layout_height="145dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8">
+            tools:layout_editor_absoluteY="183dp">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/filledTextField3"
-                style="?attr/textInputFilledStyle"
-                android:layout_width="334dp"
-                android:layout_height="54dp"
-                android:hint="@string/nombre"
-                app:layout_constraintEnd_toEndOf="parent"
+            <TextView
+                android:id="@+id/textViewScrollable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cargando descripción del evento..."
+                android:fontFamily="@font/montserrat_alternates_regular"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </ScrollView>
 
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textInputEditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:startIconDrawable="@drawable/search2" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="331dp"
-            android:layout_height="211dp"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:backgroundTint="@color/purple"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Editar"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-            app:layout_constraintVertical_bias="0.407" />
+            tools:layout_editor_absoluteY="438dp" />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
