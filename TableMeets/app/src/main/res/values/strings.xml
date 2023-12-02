@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">TableMeets</string>
-    <string name="username">Username</string>
+    <string name="username">Usuario</string>
+    <string name="userOrEmail">Usuario o Email</string>
     <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="confirmPassword">Confirmar contraseña</string>
 </resources>
