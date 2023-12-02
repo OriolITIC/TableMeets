@@ -5,4 +5,7 @@
     <string name="password">Password</string>
     <string name="email">Email</string>
     <string name="confirmPassword">Confirmar contraseña</string>
+    <string name="juego">Juego</string>
+    <string name="lugar">Lugar</string>
+    <string name="nombre">Nombre</string>
 </resources>
