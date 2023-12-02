@@ -83,7 +83,7 @@
                 android:id="@+id/filledTextField1"
                 style="?attr/textInputFilledStyle"
                 android:layout_width="153dp"
-                android:layout_height="56dp"
+                android:layout_height="54dp"
                 android:hint="@string/juego"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -97,7 +97,7 @@
                 android:id="@+id/filledTextField2"
                 style="?attr/textInputFilledStyle"
                 android:layout_width="166dp"
-                android:layout_height="61dp"
+                android:layout_height="54dp"
                 android:hint="@string/lugar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -113,7 +113,7 @@
                 android:id="@+id/filledTextField3"
                 style="?attr/textInputFilledStyle"
                 android:layout_width="334dp"
-                android:layout_height="61dp"
+                android:layout_height="54dp"
                 android:layout_marginTop="72dp"
                 android:hint="@string/nombre"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -124,7 +124,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/textInputEditText"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="match_parent"
                     app:startIconDrawable="@drawable/search2" />
             </com.google.android.material.textfield.TextInputLayout>
 
