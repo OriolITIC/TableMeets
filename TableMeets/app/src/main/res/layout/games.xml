@@ -62,7 +62,7 @@
             android:layout_marginTop="22dp"
             android:fontFamily="@font/montserrat_medium"
             android:gravity="center_horizontal"
-            android:text="Buscar evento"
+            android:text="Juegos"
             android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -71,8 +71,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
-            android:layout_width="333dp"
-            android:layout_height="135dp"
+            android:layout_width="328dp"
+            android:layout_height="56dp"
             android:layout_marginTop="55dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
@@ -80,41 +80,10 @@
             app:layout_constraintTop_toBottomOf="@+id/textView8">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/filledTextField1"
-                style="?attr/textInputFilledStyle"
-                android:layout_width="153dp"
-                android:layout_height="54dp"
-                android:hint="@string/juego"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/filledTextField2"
-                style="?attr/textInputFilledStyle"
-                android:layout_width="166dp"
-                android:layout_height="54dp"
-                android:hint="@string/lugar"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/filledTextField3"
                 style="?attr/textInputFilledStyle"
                 android:layout_width="334dp"
                 android:layout_height="54dp"
-                android:layout_marginTop="72dp"
                 android:hint="@string/nombre"
                 app:layout_constraintEnd_toEndOf="parent"
 
@@ -132,12 +101,14 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="331dp"
-            android:layout_height="146dp"
+            android:layout_height="211dp"
             android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintVertical_bias="0.407" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
