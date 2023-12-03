@@ -32,8 +32,7 @@
             android:layout_width="301dp"
             android:layout_height="108dp"
             android:layout_marginTop="16dp"
-            strokeAttrs:textStrokeColor="@android:color/black"
-            strokeAttrs:textStrokeWidth="1.7"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

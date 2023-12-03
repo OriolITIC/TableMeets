@@ -54,7 +54,7 @@
         <Button
             android:id="@+id/button"
             android:layout_width="250dp"
-            android:layout_height="60dp"
+            android:layout_height="65dp"
             android:layout_marginTop="40dp"
             android:backgroundTint="@color/purple"
             android:fontFamily="@font/montserrat_regular"
@@ -68,8 +68,8 @@
         <Button
             android:id="@+id/button3"
             android:layout_width="250dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="28dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="24dp"
             android:backgroundTint="@color/purple"
             android:fontFamily="@font/montserrat_regular"
             android:text="Mis eventos"
@@ -82,8 +82,8 @@
         <Button
             android:id="@+id/button4"
             android:layout_width="250dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="28dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="24dp"
             android:backgroundTint="@color/purple"
             android:fontFamily="@font/montserrat_regular"
             android:text="Buscar evento"
@@ -96,8 +96,8 @@
         <Button
             android:id="@+id/button5"
             android:layout_width="250dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="28dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="24dp"
             android:backgroundTint="@color/purple"
             android:fontFamily="@font/montserrat_regular"
             android:text="Juegos"

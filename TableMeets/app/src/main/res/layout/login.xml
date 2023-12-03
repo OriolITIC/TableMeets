@@ -69,6 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="35dp"
                 android:hint="@string/userOrEmail"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
                 app:layout_constraintBottom_toTopOf="@+id/filledTextField"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
