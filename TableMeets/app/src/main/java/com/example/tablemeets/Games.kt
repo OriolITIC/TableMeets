@@ -10,19 +10,25 @@ class Games: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.games)
 
+        val menuHelper = MenuHelper(this)
+        val menuIcon = findViewById<ImageView>(R.id.menu_icon)
         val arrowBack = findViewById<ImageView>(R.id.arrow_back)
         val homeLogo = findViewById<ImageView>(R.id.home_logo)
 
-        arrowBack.setOnClickListener {
+        menuIcon.setOnClickListener {
+            menuHelper.showPopupMenu(it, menuHelper)
+        }
 
-            val intent = Intent(this, Home::class.java)
-            startActivity(intent)
+        arrowBack.setOnClickListener {
+            menuHelper.goToHome()
         }
 
         homeLogo.setOnClickListener {
+            menuHelper.goToHome()
+        }
 
-            val intent = Intent(this, Home::class.java)
-            startActivity(intent)
+        menuIcon.setOnClickListener {
+            menuHelper.showPopupMenu(it, menuHelper)
         }
 
     }

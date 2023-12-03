@@ -4,10 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 
-class AttendingEvents: AppCompatActivity() {
+class EventsCreated: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.attending_events)
+        setContentView(R.layout.events_created)
 
         val menuHelper = MenuHelper(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_icon)

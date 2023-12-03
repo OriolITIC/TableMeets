@@ -27,7 +27,7 @@
             app:srcCompat="@drawable/logo_white" />
 
         <ImageView
-            android:id="@+id/imageView1"
+            android:id="@+id/menu_icon"
             android:layout_width="29dp"
             android:layout_height="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
