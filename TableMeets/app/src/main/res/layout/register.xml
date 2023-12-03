@@ -40,8 +40,6 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            strokeAttrs:textStrokeColor="@android:color/black"
-            strokeAttrs:textStrokeWidth="1.7"
             android:layout_width="301dp"
             android:layout_height="108dp"
             android:layout_marginTop="15dp"
@@ -147,7 +145,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button_save_register_data"
             android:layout_width="140dp"
             android:layout_height="55dp"
             android:layout_marginTop="20dp"

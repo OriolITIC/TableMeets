@@ -14,6 +14,19 @@
         <item name="cornerSize">20dp</item> <!-- Tamaño de redondeo -->
     </style>
 
+    <style name="PopupMenuStyle" parent="@style/Widget.AppCompat.PopupMenu">
+        <!-- Cambiar el color de fondo del menú -->
+        <item name="android:popupBackground">@color/black</item>
+        <!-- Agregar más atributos de estilo según necesites -->
+    </style>
+
+    <style name="PopupMenuTextAppearance" parent="@style/TextAppearance.AppCompat.Menu">
+        <!-- Cambiar la fuente y el color del texto -->
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/white</item>
+        <!-- Agregar más atributos de estilo según necesites -->
+    </style>
+
 
 
 </resources>
