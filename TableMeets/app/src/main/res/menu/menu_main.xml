@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/create_event"
+        android:title="Crear evento"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/events_created"
+        android:title="Eventos creados" />
+
+    <item
+        android:id="@+id/attending_events"
+        android:title="Eventos unidos"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/search_event"
+        android:title="Buscar evento" />
+
+    <item
+        android:id="@+id/games"
+        android:title="Juegos"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/profile"
+        android:title="Mi cuenta" />
+
+    <item
+        android:id="@+id/settings"
+        android:title="Ajustes"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/logout"
+        android:title="Cerrar sesión" />
+</menu>
+
+
