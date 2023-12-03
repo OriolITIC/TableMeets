@@ -13,7 +13,7 @@
         android:theme="@style/Theme.TableMeets"
         tools:targetApi="31">
         <activity
-            android:name=".Home"
+            android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +21,53 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Home"
+            android:label="."
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Register"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="true">
+
+        </activity>
+
+        <activity
+            android:name=".NewEvent"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".TypeOfEvent"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".SearchEvent"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".Games"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".EventsCreatedByMe"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".AttendingEvents"
+            android:exported="true">
+
+        </activity>
+
     </application>
 
 </manifest>
