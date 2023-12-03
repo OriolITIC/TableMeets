@@ -11,6 +11,7 @@ interface IMenuClickListener {
     fun goToAttendingEvents()
     fun goToSettings()
     fun goToProfile()
+    fun goToEditProfile()
     fun goToLogin()
     fun logout()
 

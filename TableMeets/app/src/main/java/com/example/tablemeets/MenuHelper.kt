@@ -104,6 +104,10 @@ class MenuHelper(private val context: Context) : IMenuClickListener {
         val intent = Intent(context, Login::class.java)
         context.startActivity(intent)
     }
+    override fun goToEditProfile (){
+        val intent = Intent(context, EditProfile::class.java)
+        context.startActivity(intent)
+    }
 
     override fun logout (){
         goToLogin()
