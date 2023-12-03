@@ -11,17 +11,14 @@ class Register : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register)
 
+        val menuHelper = MenuHelper(this)
         //val arrowBack = findViewById<ImageView>(R.id.arrow_back)
         val goToLogin = findViewById<Button>(R.id.button_save_register_data)
 
         goToLogin.setOnClickListener {
-
-            goToLogin()
+            menuHelper.goToLogin()
         }
     }
 
-    private fun goToLogin() {
-        val intent = Intent(this, Login::class.java)
-        startActivity(intent)
-    }
+
 }
