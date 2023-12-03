@@ -95,6 +95,7 @@
                 style="?attr/textInputFilledStyle"
                 android:layout_width="153dp"
                 android:layout_height="54dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
                 android:hint="@string/juego"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -109,6 +110,7 @@
                 style="?attr/textInputFilledStyle"
                 android:layout_width="166dp"
                 android:layout_height="54dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
                 android:hint="@string/lugar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -126,6 +128,7 @@
                 android:layout_width="196dp"
                 android:layout_height="56dp"
                 android:layout_marginTop="72dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
                 android:hint="@string/nombre"
 
                 app:layout_constraintStart_toStartOf="parent"
