@@ -12,16 +12,17 @@ class ForgotPassword : AppCompatActivity() {
         setContentView(R.layout.forgot_password)
 
         //val arrowBack = findViewById<ImageView>(R.id.arrow_back)
+        val navigationHelper = NavigationHelper(this)
         val goToLogin = findViewById<Button>(R.id.button_send_email)
 
-        goToLogin.setOnClickListener {
+        //arrowBack.setOnClickListener {
+            //navigationHelper.goToLogin()
+        //}
 
-            goToLogin()
+        goToLogin.setOnClickListener(){
+            navigationHelper.goToLogin()
         }
     }
 
-    private fun goToLogin() {
-        val intent = Intent(this, Login::class.java)
-        startActivity(intent)
-    }
+
 }

@@ -1,7 +1,7 @@
 package com.example.tablemeets
 
 // MenuClickListener.kt
-interface IMenuClickListener {
+interface INavigationHelper {
     fun goToHome()
     fun goToCreateEvent()
     fun goToTypeOfEvent()

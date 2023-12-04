@@ -9,21 +9,22 @@ class EventsCreated: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.events_created)
 
-        val menuHelper = MenuHelper(this)
+        val menuHelper = MenuHandler(this)
+        val navigationHelper = NavigationHelper(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_icon)
         val arrowBack = findViewById<ImageView>(R.id.arrow_back)
         val homeLogo = findViewById<ImageView>(R.id.home_logo)
 
         arrowBack.setOnClickListener {
-            menuHelper.goToTypeOfEvent()
+            navigationHelper.goToTypeOfEvent()
         }
 
         homeLogo.setOnClickListener {
-            menuHelper.goToHome()
+            navigationHelper.goToHome()
         }
 
         menuIcon.setOnClickListener {
-            menuHelper.showPopupMenu(it, menuHelper)
+            menuHelper.showPopupMenu(it, navigationHelper)
         }
 
     }

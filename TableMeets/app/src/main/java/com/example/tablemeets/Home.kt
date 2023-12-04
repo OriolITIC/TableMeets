@@ -10,7 +10,8 @@ class Home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home)
-        val menuHelper = MenuHelper(this)
+        val menuHelper = MenuHandler(this)
+        val navigationHelper = NavigationHelper(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_icon)
         val goToCreateEvent = findViewById<Button>(R.id.button_create_event)
         val goToTypeOfEvent = findViewById<Button>(R.id.button_my_events)
@@ -18,23 +19,23 @@ class Home : AppCompatActivity() {
         val goToGames = findViewById<Button>(R.id.button_games)
 
         menuIcon.setOnClickListener {
-            menuHelper.showPopupMenu(it, menuHelper)
+            menuHelper.showPopupMenu(it, navigationHelper)
         }
 
         goToCreateEvent.setOnClickListener {
-            menuHelper.goToCreateEvent()
+            navigationHelper.goToCreateEvent()
         }
 
         goToTypeOfEvent.setOnClickListener {
-            menuHelper.goToTypeOfEvent()
+            navigationHelper.goToTypeOfEvent()
         }
 
         goToSearchEvent.setOnClickListener {
-            menuHelper.goToSearchEvent()
+            navigationHelper.goToSearchEvent()
         }
 
         goToGames.setOnClickListener {
-            menuHelper.goToGames()
+            navigationHelper.goToGames()
         }
     }
 
