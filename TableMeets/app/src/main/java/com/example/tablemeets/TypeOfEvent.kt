@@ -11,7 +11,7 @@ class TypeOfEvent : AppCompatActivity() {
         setContentView(R.layout.type_of_event)
 
         val menuHelper = MenuHandler(this)
-        val menuIcon = findViewById<ImageView>(R.id.menu_icon)
+        val menuIcon = findViewById<ImageView>(R.id.menu_logo)
         val navigationHelper = NavigationHelper(this)
         val goToEventsCreatedByMe = findViewById<Button>(R.id.button_events_created_by_me)
         val goToAttendingEvents = findViewById<Button>(R.id.button_attending_events)
