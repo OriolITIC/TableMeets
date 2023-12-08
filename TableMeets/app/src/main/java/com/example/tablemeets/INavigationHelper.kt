@@ -16,6 +16,7 @@ interface INavigationHelper {
     fun goToForgotPassword()
     fun goToLogin()
     fun logout()
+    fun goToAboutUs()
 
 
 
