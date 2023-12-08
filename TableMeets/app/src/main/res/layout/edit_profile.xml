@@ -22,7 +22,7 @@
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo_white" />
+            app:srcCompat="@drawable/home_logo" />
 
         <ImageView
             android:id="@+id/menu_icon"
@@ -32,10 +32,11 @@
             android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/menu" />
+            app:srcCompat="@drawable/menu_logo" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -52,19 +53,20 @@
             android:id="@+id/imageView"
             android:layout_width="0dp"
             android:layout_height="110dp"
-            android:src="@drawable/profile"
+            android:src="@drawable/profile_logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView1"
-            android:layout_width="190dp"
-            android:layout_height="34dp"
+            android:id="@+id/textView8"
+            android:layout_width="250dp"
+            android:layout_height="28dp"
             android:layout_marginTop="14dp"
-            android:fontFamily="@font/montserrat_regular"
-            android:text="Usuario: cargando ..."
-            android:textSize="18sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center_horizontal"
+            android:text="Editar mis datos"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -73,70 +75,76 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="337dp"
-        android:layout_height="363dp"
+        android:layout_height="354dp"
         android:layout_marginLeft="40dp"
+        android:layout_marginTop="14dp"
         android:layout_marginRight="40dp">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="190dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Usuario: cargando ..."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/filledTextField2"
-            style="?attr/textInputFilledStyle"
-            android:layout_width="0dp"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="20dp"
-            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginTop="14dp"
             android:hint="@string/new_email"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/textView1"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="51dp" />
+                android:layout_height="51dp"
+                android:cursorVisible="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/filledTextField3"
-            style="?attr/textInputFilledStyle"
-            android:layout_width="0dp"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginTop="14dp"
             android:hint="@string/new_password"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/filledTextField2">
+            app:layout_constraintTop_toBottomOf="@+id/filledTextField2"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/Indigo"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:cursorVisible="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/filledTextField4"
-            style="?attr/textInputFilledStyle"
-            android:layout_width="0dp"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="20dp"
-            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+            android:layout_marginTop="14dp"
             android:hint="@string/confirmPassword"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/filledTextField3">
+            app:layout_constraintTop_toBottomOf="@+id/filledTextField3"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/Indigo"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:layout_marginBottom="0dp" />
+                android:cursorVisible="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -144,14 +152,12 @@
             android:id="@+id/button_save_profile"
             android:layout_width="108dp"
             android:layout_height="54dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="56dp"
+            android:layout_marginTop="18dp"
             android:backgroundTint="@color/purple"
             android:fontFamily="@font/montserrat_regular"
             android:text="Guardar"
             android:textColor="@android:color/white"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"

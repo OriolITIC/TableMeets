@@ -22,7 +22,7 @@
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo_white" />
+            app:srcCompat="@drawable/home_logo" />
 
         <ImageView
             android:id="@+id/menu_icon"
@@ -32,7 +32,7 @@
             android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/menu" />
+            app:srcCompat="@drawable/menu_logo" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -52,7 +52,8 @@
             android:id="@+id/imageView"
             android:layout_width="0dp"
             android:layout_height="78dp"
-            android:src="@drawable/search"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/search_logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -73,107 +74,89 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="426dp"
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginRight="40dp">
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
-            android:layout_width="333dp"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="78dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/search_button"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintTop_toBottomOf="@+id/filledTextField2" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/filledTextField1"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="8dp"
+            android:hint="@string/juego"
+            app:layout_constraintEnd_toStartOf="@+id/filledTextField2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/filledTextField1"
-                style="?attr/textInputFilledStyle"
-                android:layout_width="153dp"
-                android:layout_height="54dp"
-                android:layout_marginTop="14dp"
-                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
-                android:hint="@string/juego"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/filledTextField2"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="8dp"
+            android:hint="@string/lugar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/filledTextField1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/filledTextField2"
-                style="?attr/textInputFilledStyle"
-                android:layout_width="166dp"
-                android:layout_height="54dp"
-                android:layout_marginTop="14dp"
-                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
-                android:hint="@string/lugar"
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/filledTextField3"
-                style="?attr/textInputFilledStyle"
-                android:layout_width="0dp"
-                android:layout_height="56dp"
-                android:layout_marginTop="14dp"
-                android:layout_marginTop="72dp"
-                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
-                android:hint="@string/nombre"
-
-
-                android:layout_marginEnd="14dp"
-                android:hint="@string/nombre"
-                app:layout_constraintEnd_toStartOf="@+id/imageView3"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/filledTextField1">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textInputEditText"
-                    android:layout_width="233dp"
-                    android:layout_height="match_parent"
-                    app:startIconDrawable="@drawable/search2" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="84dp"
-                android:layout_height="53dp"
-                android:layout_marginTop="14dp"
-                android:src="@drawable/search_button_2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/filledTextField2" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="337dp"
-            android:layout_height="192dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/filledTextField3"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
             android:layout_marginTop="14dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginEnd="8dp"
+            android:hint="@string/nombre"
+            app:layout_constraintEnd_toStartOf="@+id/imageView3"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/filledTextField1"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
 
-
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="328dp"
+        android:layout_height="255dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="40dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="74dp"
+        android:layout_height="100dp"
         android:background="@drawable/footer_background"></androidx.constraintlayout.widget.ConstraintLayout>
 
 

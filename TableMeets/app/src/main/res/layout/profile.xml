@@ -22,7 +22,7 @@
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo_white" />
+            app:srcCompat="@drawable/home_logo" />
 
         <ImageView
             android:id="@+id/menu_icon"
@@ -32,7 +32,7 @@
             android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/menu" />
+            app:srcCompat="@drawable/menu_logo" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -52,7 +52,7 @@
             android:id="@+id/imageView"
             android:layout_width="151dp"
             android:layout_height="110dp"
-            android:src="@drawable/profile"
+            android:src="@drawable/profile_logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -74,16 +74,15 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="365dp"
+        android:layout_height="336dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="24dp"
         android:layout_marginRight="40dp">
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="190dp"
             android:layout_height="34dp"
-            android:layout_marginTop="14dp"
             android:fontFamily="@font/montserrat_regular"
             android:text="Usuario: cargando ..."
             android:textSize="18sp"

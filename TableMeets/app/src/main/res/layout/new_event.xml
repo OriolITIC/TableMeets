@@ -24,7 +24,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0"
-            app:srcCompat="@drawable/logo_white" />
+            app:srcCompat="@drawable/home_logo" />
 
         <ImageView
             android:id="@+id/menu_icon"
@@ -34,7 +34,7 @@
             android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/menu" />
+            app:srcCompat="@drawable/menu_logo" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -57,7 +57,7 @@
             android:id="@+id/imageView"
             android:layout_width="0dp"
             android:layout_height="78dp"
-            android:src="@drawable/nuevo_evento"
+            android:src="@drawable/new_event"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -80,10 +80,29 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="387dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="14dp"
         android:layout_marginRight="40dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/filledTextField3"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:hint="@string/nombre"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:cursorVisible="true"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout"
@@ -93,10 +112,47 @@
             android:hint="Descripción"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/filledTextField1"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textInputEditText23"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text|textMultiLine" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/filledTextField111"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="8dp"
+            android:hint="@string/juego"
+            app:layout_constraintEnd_toStartOf="@+id/filledTextField22"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filledTextField3"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/filledTextField22"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:hint="@string/lugar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/filledTextField111"
+            app:layout_constraintTop_toBottomOf="@+id/filledTextField3"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
+
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="text" />
@@ -104,162 +160,80 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/filledTextField1"
-            style="?attr/textInputFilledStyle"
-            android:layout_width="162dp"
+            android:layout_width="0dp"
             android:layout_height="60dp"
-            android:layout_marginTop="15dp"
-            android:hint="@string/juego"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="8dp"
+            android:hint="Fecha"
+            app:layout_constraintEnd_toStartOf="@+id/filledTextField555"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+            app:layout_constraintTop_toBottomOf="@+id/filledTextField111"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:inputType="date" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/filledTextField2"
-            style="?attr/textInputFilledStyle"
+            android:id="@+id/filledTextField555"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="15dp"
-            android:hint="@string/lugar"
+            android:layout_marginTop="14dp"
+            android:hint="Hora"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/filledTextField1"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+            app:layout_constraintTop_toBottomOf="@+id/filledTextField22"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/filledTextField3"
-            style="?attr/textInputFilledStyle"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-
-            android:layout_marginTop="15dp"
-            android:hint="@string/nombre"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/filledTextField1">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputEditText"
-                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:startIconDrawable="@drawable/search2" />
+                android:inputType="time" />
         </com.google.android.material.textfield.TextInputLayout>
-            app:layout_constraintTop_toBottomOf="@+id/textView8">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout"
-                android:layout_width="322dp"
-                android:layout_height="121dp"
-                android:hint="Descripción"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textInputEditText23"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/filledTextField1"
-                style="?attr/textInputFilledStyle"
-                android:layout_width="162dp"
-                android:layout_height="60dp"
-                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
-                android:layout_marginTop="15dp"
-                android:hint="@string/juego"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/filledTextField2"
-                style="?attr/textInputFilledStyle"
-                android:layout_width="152dp"
-                android:layout_height="60dp"
-                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
-                android:layout_marginTop="15dp"
-                android:hint="@string/lugar"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/filledTextField1"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/filledTextField3"
-                style="?attr/textInputFilledStyle"
-                android:layout_width="325dp"
-                android:layout_height="60dp"
-                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
-                android:layout_marginTop="15dp"
-                android:hint="@string/nombre"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/filledTextField1">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textInputEditText"
-                    android:layout_width="318dp"
-                    android:layout_height="match_parent"
-                    app:startIconDrawable="@drawable/search2" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
             android:id="@+id/button_create_event"
             android:layout_width="100dp"
             android:layout_height="55dp"
-            android:layout_marginTop="45dp"
-            android:layout_marginEnd="36dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
             android:backgroundTint="@color/purple"
             android:fontFamily="@font/montserrat_regular"
             android:text="Crear"
             android:textColor="@android:color/white"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/filledTextField3" />
+            app:layout_constraintStart_toEndOf="@+id/button_remove_all_inputs"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
         <Button
             android:id="@+id/button_remove_all_inputs"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="100dp"
             android:layout_height="55dp"
-            android:layout_marginStart="68dp"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="8dp"
             android:backgroundTint="@color/white"
             android:fontFamily="@font/montserrat_regular"
             android:radius="8dp"
             android:text="Borrar"
             android:textColor="@android:color/black"
             android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/button_create_event"
+            app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/filledTextField3"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
             app:strokeColor="@color/black" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="match_parent"
         android:background="@drawable/footer_background"></androidx.constraintlayout.widget.ConstraintLayout>
 
 
