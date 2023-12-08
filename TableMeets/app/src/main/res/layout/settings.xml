@@ -156,12 +156,10 @@
             android:id="@+id/dark_mode_MaterialSwitch"
             android:layout_width="62dp"
             android:layout_height="50dp"
-            android:layout_marginStart="120dp"
-            android:layout_marginTop="11dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="10dp"
             android:checked="false"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/dark_mode_TextView"
             app:layout_constraintTop_toBottomOf="@+id/materialDivider2" />
 
         <!-- VIBRATION -->
@@ -191,11 +189,11 @@
             android:id="@+id/vibration_MaterialSwitch"
             android:layout_width="62dp"
             android:layout_height="50dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="10dp"
-            android:checked="false"
+            android:checked="true"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/materialDivider3"/>
+            app:layout_constraintTop_toBottomOf="@+id/dark_mode_MaterialSwitch" />
 
         <!-- BlOCKED USERS -->
 
