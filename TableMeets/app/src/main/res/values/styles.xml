@@ -11,7 +11,7 @@
 
     <style name="ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded" parent="">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">20dp</item> <!-- Tamaño de redondeo -->
+        <item name="cornerSize">0dp</item> <!-- Tamaño de redondeo -->
     </style>
 
     <style name="PopupMenuStyle" parent="@style/Widget.AppCompat.PopupMenu">
@@ -27,6 +27,11 @@
         <!-- Agregar más atributos de estilo según necesites -->
     </style>
 
+    <style name="TextInputLayoutStyle">
+        <!-- Estilo para la línea del input -->
+        <item name="boxStrokeColor">@color/black</item> <!-- Color de borde -->
+        <item name="boxStrokeWidth">1dp</item> <!-- Ancho de borde -->
+    </style>
 
 
 </resources>

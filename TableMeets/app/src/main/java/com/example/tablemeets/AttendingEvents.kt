@@ -9,21 +9,22 @@ class AttendingEvents: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.attending_events)
 
-        val menuHelper = MenuHelper(this)
+        val menuHelper = MenuHandler(this)
+        val navigationHelper = NavigationHelper(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_icon)
-        val arrowBack = findViewById<ImageView>(R.id.arrow_back)
+        val arrowBack = findViewById<ImageView>(R.id.left_arrow)
         val homeLogo = findViewById<ImageView>(R.id.home_logo)
 
         arrowBack.setOnClickListener {
-            menuHelper.goToTypeOfEvent()
+            navigationHelper.goToTypeOfEvent()
         }
 
         homeLogo.setOnClickListener {
-            menuHelper.goToHome()
+            navigationHelper.goToHome()
         }
 
         menuIcon.setOnClickListener {
-            menuHelper.showPopupMenu(it, menuHelper)
+            menuHelper.showPopupMenu(it, navigationHelper)
         }
 
     }

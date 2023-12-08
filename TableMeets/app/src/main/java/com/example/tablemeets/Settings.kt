@@ -1,6 +1,5 @@
 package com.example.tablemeets
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -10,21 +9,22 @@ class Settings: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings)
 
-        val menuHelper = MenuHelper(this)
+        val menuHelper = MenuHandler(this)
+        val navigationHelper = NavigationHelper(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_icon)
-        val arrowBack = findViewById<ImageView>(R.id.arrow_back)
+        val arrowBack = findViewById<ImageView>(R.id.left_arrow)
         val homeLogo = findViewById<ImageView>(R.id.home_logo)
 
         arrowBack.setOnClickListener {
-            menuHelper.goToHome()
+            navigationHelper.goToHome()
         }
 
         homeLogo.setOnClickListener {
-            menuHelper.goToHome()
+            navigationHelper.goToHome()
         }
 
         menuIcon.setOnClickListener {
-            menuHelper.showPopupMenu(it, menuHelper)
+            menuHelper.showPopupMenu(it, navigationHelper)
         }
 
     }

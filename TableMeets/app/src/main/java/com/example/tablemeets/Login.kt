@@ -11,21 +11,22 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
+        val navigationHelper = NavigationHelper(this)
         val goToHome = findViewById<Button>(R.id.button_login)
         val goToRegister = findViewById<Button>(R.id.button_register)
         val goToForgotPassword = findViewById<TextView>(R.id.forgot_password)
 
 
         goToHome.setOnClickListener {
-            goToHome()
+            navigationHelper.goToHome()
         }
 
         goToRegister.setOnClickListener {
-            goToRegister()
+            navigationHelper.goToRegister()
         }
 
         goToForgotPassword.setOnClickListener {
-            goToForgotPassword()
+            navigationHelper.goToForgotPassword()
         }
 
 
