@@ -92,6 +92,7 @@
                 style="?attr/textInputFilledStyle"
                 android:layout_width="0dp"
                 android:layout_height="54dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
                 android:hint="@string/nombre"
 
                 app:layout_constraintStart_toStartOf="parent"
