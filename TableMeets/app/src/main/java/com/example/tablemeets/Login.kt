@@ -3,6 +3,7 @@ package com.example.tablemeets
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 
@@ -12,10 +13,14 @@ class Login : AppCompatActivity() {
         setContentView(R.layout.login)
 
         val navigationHelper = NavigationHelper(this)
+        val goToAboutUs = findViewById<View>(R.id.about_us)
         val goToHome = findViewById<Button>(R.id.button_login)
         val goToRegister = findViewById<Button>(R.id.button_register)
         val goToForgotPassword = findViewById<TextView>(R.id.forgot_password)
 
+        goToAboutUs.setOnClickListener {
+            navigationHelper.goToAboutUs()
+        }
 
         goToHome.setOnClickListener {
             navigationHelper.goToHome()
@@ -28,6 +33,7 @@ class Login : AppCompatActivity() {
         goToForgotPassword.setOnClickListener {
             navigationHelper.goToForgotPassword()
         }
+
 
 
     }
