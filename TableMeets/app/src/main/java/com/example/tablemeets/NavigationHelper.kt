@@ -59,6 +59,15 @@ class NavigationHelper(private val context: Context) : INavigationHelper{
         val intent = Intent(context, EditProfile::class.java)
         context.startActivity(intent)
     }
+    override fun goToRegister (){
+        val intent = Intent(context, Register::class.java)
+        context.startActivity(intent)
+    }
+
+    override fun goToForgotPassword (){
+        val intent = Intent(context, ForgotPassword::class.java)
+        context.startActivity(intent)
+    }
 
     override fun logout (){
         goToLogin()

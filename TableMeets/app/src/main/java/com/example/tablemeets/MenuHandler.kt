@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.PopupMenu
 
 class MenuHandler(private val context: Context){
-    fun showPopupMenu(view: View, navigationHelper: INavigationHelper) {
+    fun showPopupMenu(view: View, navigationHelper: NavigationHelper) {
         val popupMenu = PopupMenu(context, view)
         popupMenu.menuInflater.inflate(R.menu.menu_main, popupMenu.menu)
 
@@ -47,13 +47,6 @@ class MenuHandler(private val context: Context){
                 else -> false
             }
         }
-
         popupMenu.show()
     }
-
-
-
-
-
-
 }

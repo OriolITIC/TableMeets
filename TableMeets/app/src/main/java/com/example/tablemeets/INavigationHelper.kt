@@ -12,6 +12,8 @@ interface INavigationHelper {
     fun goToSettings()
     fun goToProfile()
     fun goToEditProfile()
+    fun goToRegister()
+    fun goToForgotPassword()
     fun goToLogin()
     fun logout()
 

@@ -11,45 +11,48 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/LinearLayout"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@color/purple"
-        android:backgroundTint="@color/purple">
+        android:layout_height="110dp"
+        android:background="@drawable/header_background">
 
         <ImageView
             android:id="@+id/home_logo"
-            android:layout_width="44dp"
-            android:layout_height="44dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.07"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logo_white" />
 
         <ImageView
             android:id="@+id/menu_icon"
-            android:layout_width="29dp"
-            android:layout_height="32dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.94"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/menu" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="556dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="40dp">
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/left_arrow"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="6dp"
+            android:src="@drawable/left_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="162dp"
             android:layout_height="46dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="14dp"
             android:fontFamily="@font/montserrat_medium"
             android:gravity="center_horizontal"
             android:text="Ajustes"
@@ -59,36 +62,34 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <ImageView
-            android:id="@+id/arrow_back"
-            android:layout_width="74dp"
-            android:layout_height="42dp"
-            android:layout_marginEnd="30dp"
-            android:src="@drawable/left_arrow"
-            app:layout_constraintEnd_toStartOf="@+id/imageView"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
             android:id="@+id/imageView"
-            android:layout_width="90dp"
+            android:layout_width="0dp"
             android:layout_height="78dp"
-            android:src="@drawable/ajustes"
+            android:src="@drawable/settings"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="421dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="40dp">
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="90dp"
             android:layout_height="29dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="14dp"
             android:fontFamily="@font/montserrat_regular"
             android:text="Idioma"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.divider.MaterialDivider
             android:id="@+id/materialDivider3"
@@ -221,14 +222,12 @@
             android:id="@+id/button3"
             android:layout_width="108dp"
             android:layout_height="54dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="22dp"
             android:backgroundTint="@color/purple"
             android:fontFamily="@font/montserrat_regular"
             android:text="Guardar"
             android:textColor="@android:color/white"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
@@ -239,8 +238,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/purple"
+        android:layout_height="74dp"
+        android:background="@drawable/footer_background"
         android:orientation="vertical"></LinearLayout>
 
 

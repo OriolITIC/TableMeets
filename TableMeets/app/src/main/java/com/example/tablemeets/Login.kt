@@ -22,11 +22,11 @@ class Login : AppCompatActivity() {
         }
 
         goToRegister.setOnClickListener {
-            goToRegister()
+            navigationHelper.goToRegister()
         }
 
         goToForgotPassword.setOnClickListener {
-            goToForgotPassword()
+            navigationHelper.goToForgotPassword()
         }
 
 

@@ -12,7 +12,7 @@ class Games: AppCompatActivity() {
         val menuHelper = MenuHandler(this)
         val navigationHelper = NavigationHelper(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_icon)
-        val arrowBack = findViewById<ImageView>(R.id.arrow_back)
+        val arrowBack = findViewById<ImageView>(R.id.left_arrow)
         val homeLogo = findViewById<ImageView>(R.id.home_logo)
 
         menuIcon.setOnClickListener {
@@ -26,6 +26,5 @@ class Games: AppCompatActivity() {
         homeLogo.setOnClickListener {
             navigationHelper.goToHome()
         }
-
     }
 }
