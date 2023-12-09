@@ -86,9 +86,9 @@
         android:layout_marginRight="40dp">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/filledTextField3"
+            android:id="@+id/NameTextInput"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="56dp"
             android:hint="@string/name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -99,39 +99,21 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textInputEditText"
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
+                android:layout_height="match_parent"
                 android:cursorVisible="true"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout"
+            android:id="@+id/GameTextInput"
             android:layout_width="0dp"
-            android:layout_height="91dp"
-            android:layout_marginTop="14dp"
-            android:hint="Descripción"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/filledTextField1"
-            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputEditText23"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:inputType="text|textMultiLine" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/filledTextField111"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="56dp"
             android:layout_marginTop="14dp"
             android:layout_marginEnd="8dp"
             android:hint="@string/game"
-            app:layout_constraintEnd_toStartOf="@+id/filledTextField22"
+            app:layout_constraintEnd_toStartOf="@+id/LocationTextInput"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/filledTextField3"
+            app:layout_constraintTop_toBottomOf="@+id/NameTextInput"
             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
 
             <EditText
@@ -141,15 +123,15 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/filledTextField22"
+            android:id="@+id/LocationTextInput"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="56dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="14dp"
             android:hint="@string/location"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/filledTextField111"
-            app:layout_constraintTop_toBottomOf="@+id/filledTextField3"
+            app:layout_constraintStart_toEndOf="@+id/GameTextInput"
+            app:layout_constraintTop_toBottomOf="@+id/NameTextInput"
             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
 
             <EditText
@@ -159,15 +141,15 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/filledTextField1"
+            android:id="@+id/DateTextInput"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="56dp"
             android:layout_marginTop="14dp"
             android:layout_marginEnd="8dp"
             android:hint="Fecha"
-            app:layout_constraintEnd_toStartOf="@+id/filledTextField555"
+            app:layout_constraintEnd_toStartOf="@+id/TimeTextInput"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/filledTextField111"
+            app:layout_constraintTop_toBottomOf="@+id/GameTextInput"
             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
 
             <EditText
@@ -177,21 +159,39 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/filledTextField555"
+            android:id="@+id/TimeTextInput"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="56dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="14dp"
             android:hint="Hora"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/filledTextField1"
-            app:layout_constraintTop_toBottomOf="@+id/filledTextField22"
+            app:layout_constraintStart_toEndOf="@+id/DateTextInput"
+            app:layout_constraintTop_toBottomOf="@+id/LocationTextInput"
             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="time" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/DescTextInput"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="14dp"
+            android:hint="Descripción"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/DateTextInput"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditText23"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text|textMultiLine" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -207,7 +207,7 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/button_remove_all_inputs"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/DescTextInput" />
 
         <Button
             android:id="@+id/button_remove_all_inputs"
@@ -225,7 +225,7 @@
             app:layout_constraintEnd_toStartOf="@+id/button_create_event"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/DescTextInput"
             app:strokeColor="@color/black" />
 
 

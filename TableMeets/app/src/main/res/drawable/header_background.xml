@@ -10,7 +10,7 @@
     </item>
 
 
-    <item android:height="45dp" android:width="415dp"
+    <item android:height="45dp" android:width="396dp"
     android:top="66dp"
     android:drawable="@drawable/elipse" />
 </layer-list>
