@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:backgroundTint="@color/Indigo"
     android:orientation="vertical"
     tools:context=".Home">
 
@@ -28,7 +29,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/white">
 
         <ImageView
             android:id="@+id/left_arrow"
@@ -62,6 +64,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -69,9 +72,10 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
+                android:background="@color/white"
                 android:padding="16dp">
 
                 <TextView
@@ -117,6 +121,7 @@
                     android:id="@+id/textViewTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/montserrat_medium"
                     android:text="Sobre nosotros"
                     android:textColor="@android:color/black"
@@ -168,8 +173,8 @@
 
                 <TextView
                     android:id="@+id/textView11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="31dp"
                     android:layout_marginTop="30dp"
                     android:fontFamily="@font/montserrat_alternates_medium"
                     android:paddingLeft="0dp"
@@ -188,11 +193,25 @@
                     android:fontFamily="@font/montserrat_alternates_regular"
                     android:paddingLeft="0dp"
                     android:paddingBottom="0dp"
-                    android:text="@string/join_our_community_description"
+                    android:text="@string/join_our_community_description_part1"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                <TextView
+                    android:id="@+id/textView134"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_alternates_regular"
+                    android:paddingLeft="0dp"
+                    android:paddingBottom="0dp"
+                    android:text="@string/join_our_community_description_part2"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
                 <TextView
                     android:id="@+id/textView13"
@@ -210,10 +229,10 @@
                     android:id="@+id/logo_black"
                     android:layout_width="200dp"
                     android:layout_height="50dp"
-                    android:layout_marginTop="31dp"
+                    android:layout_marginTop="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView12"
+                    app:layout_constraintTop_toBottomOf="@+id/textView134"
                     app:srcCompat="@drawable/logo_black" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>

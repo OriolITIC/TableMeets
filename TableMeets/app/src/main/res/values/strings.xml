@@ -17,7 +17,8 @@
     <string name="what_we_offer_description_part3">- Conectar con jugadores: Encuentra personas afines con tus intereses en juegos y haz nuevos amigos.</string>
     <string name="what_we_offer_description_part4">- Experiencias únicas: Disfruta de juegos de mesa en un ambiente amigable y lleno de diversión.</string>
     <string name="join_our_community_title">Únete a la Comunidad\n</string>
-    <string name="join_our_community_description">¡Únete a nuestra creciente comunidad de jugadores de mesa!\nExplora, participa en eventos emocionantes y conecta con personas apasionadas como tú.</string>
+    <string name="join_our_community_description_part1">¡Únete a nuestra creciente comunidad de jugadores de mesa!</string>
+    <string name="join_our_community_description_part2">Explora, participa en eventos emocionantes y conecta con personas apasionadas como tú.</string>
 
 
 </resources>
