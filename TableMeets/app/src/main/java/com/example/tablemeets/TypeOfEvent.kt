@@ -15,13 +15,8 @@ class TypeOfEvent : AppCompatActivity() {
         val navigationHelper = NavigationHelper(this)
         val goToEventsCreatedByMe = findViewById<Button>(R.id.button_events_created_by_me)
         val goToAttendingEvents = findViewById<Button>(R.id.button_attending_events)
-        val arrowBack = findViewById<ImageView>(R.id.left_arrow)
         val homeLogo = findViewById<ImageView>(R.id.home_logo)
 
-
-        arrowBack.setOnClickListener {
-            navigationHelper.goToHome()
-        }
 
         homeLogo.setOnClickListener {
             navigationHelper.goToHome()

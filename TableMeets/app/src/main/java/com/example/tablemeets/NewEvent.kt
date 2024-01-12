@@ -15,7 +15,6 @@ class NewEvent : AppCompatActivity() {
         val menuHelper = MenuHandler(this)
         val navigationHelper = NavigationHelper(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_icon)
-        val arrowBack = findViewById<ImageView>(R.id.left_arrow)
         val homeLogo = findViewById<ImageView>(R.id.home_logo)
         val nameTextInput = findViewById<TextInputLayout>(R.id.NameTextInput)
         val gameTextInput = findViewById<TextInputLayout>(R.id.GameTextInput)
@@ -24,21 +23,12 @@ class NewEvent : AppCompatActivity() {
         val dateTextInput = findViewById<TextInputLayout>(R.id.DateTextInput)
         val descTextInput = findViewById<TextInputLayout>(R.id.DescTextInput)
         val removeData = findViewById<Button>(R.id.button_remove_all_inputs)
-        //val createEvent = findViewById<ImageView>(R.id.home_logo)
 
         menuIcon.setOnClickListener {
             menuHelper.showPopupMenu(it, navigationHelper)
         }
 
-        arrowBack.setOnClickListener {
-            navigationHelper.goToHome()
-        }
-
         homeLogo.setOnClickListener {
-            navigationHelper.goToHome()
-        }
-
-        arrowBack.setOnClickListener {
             navigationHelper.goToHome()
         }
 
