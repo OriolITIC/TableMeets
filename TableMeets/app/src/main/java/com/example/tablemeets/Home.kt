@@ -41,9 +41,6 @@ class Home : AppCompatActivity() {
 
 
 
-
-
-
     private fun goToGames() {
         val intent = Intent(this, Games::class.java)
         startActivity(intent)

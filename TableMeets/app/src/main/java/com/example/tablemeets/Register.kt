@@ -12,16 +12,12 @@ class Register : AppCompatActivity() {
 
         val menuHelper = MenuHandler(this)
         val navigationHelper = NavigationHelper(this)
-        val arrowBack = findViewById<ImageView>(R.id.left_arrow)
         val goToLogin = findViewById<Button>(R.id.button_save_register_data)
 
         goToLogin.setOnClickListener {
             navigationHelper.goToLogin()
         }
 
-        arrowBack.setOnClickListener{
-            navigationHelper.goToLogin()
-        }
     }
 
 
