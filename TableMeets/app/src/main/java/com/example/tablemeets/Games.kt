@@ -9,6 +9,7 @@ class Games: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.games)
 
+
         val menuHelper = MenuHandler(this)
         val navigationHelper = NavigationHelper(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_icon)

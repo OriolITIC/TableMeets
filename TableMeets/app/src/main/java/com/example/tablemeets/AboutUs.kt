@@ -9,6 +9,7 @@ class AboutUs: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.about_us)
 
+
         val navigationHelper = NavigationHelper(this)
 
     }

@@ -34,7 +34,9 @@ android {
         jvmTarget = "1.8"
     }
 }
-
+//implementation("com.android.support:appcompat-v7:28.0.0")
+//    implementation("com.android.support:appcompat-v4:27.1.1")
+//    implementation("com.android.support:design:27.1.1")
 dependencies {
 
     implementation("androidx.core:core-ktx:1.9.0")

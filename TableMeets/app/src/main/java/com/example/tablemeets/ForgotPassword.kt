@@ -11,6 +11,7 @@ class ForgotPassword : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.forgot_password)
 
+
         val navigationHelper = NavigationHelper(this)
         val goToLogin = findViewById<Button>(R.id.button_send_email)
 

@@ -10,6 +10,7 @@ class Register : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register)
 
+
         val menuHelper = MenuHandler(this)
         val navigationHelper = NavigationHelper(this)
         val goToLogin = findViewById<Button>(R.id.button_save_register_data)

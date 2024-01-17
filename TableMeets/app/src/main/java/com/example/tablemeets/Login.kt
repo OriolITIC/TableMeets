@@ -12,6 +12,7 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
+
         val navigationHelper = NavigationHelper(this)
         val goToAboutUs = findViewById<View>(R.id.about_us)
         val goToHome = findViewById<Button>(R.id.button_login)

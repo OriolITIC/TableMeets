@@ -9,6 +9,7 @@ class SearchEvent: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.search_event)
 
+
         val menuHelper = MenuHandler(this)
         val navigationHelper = NavigationHelper(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_icon)
