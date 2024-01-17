@@ -10,6 +10,7 @@ class TypeOfEvent : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.type_of_event)
 
+
         val menuHelper = MenuHandler(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_logo)
         val navigationHelper = NavigationHelper(this)

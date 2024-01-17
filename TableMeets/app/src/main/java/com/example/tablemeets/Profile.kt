@@ -10,6 +10,7 @@ class Profile: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.profile)
 
+
         val menuHelper = MenuHandler(this)
         val navigationHelper = NavigationHelper(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_icon)

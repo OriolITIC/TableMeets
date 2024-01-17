@@ -9,6 +9,7 @@ class EventsCreated: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.events_created)
 
+
         val menuHelper = MenuHandler(this)
         val navigationHelper = NavigationHelper(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_icon)
@@ -21,6 +22,7 @@ class EventsCreated: AppCompatActivity() {
 
         menuIcon.setOnClickListener {
             menuHelper.showPopupMenu(it, navigationHelper)
+
         }
 
     }

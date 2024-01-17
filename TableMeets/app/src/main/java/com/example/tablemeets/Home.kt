@@ -3,6 +3,7 @@ package com.example.tablemeets
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.ImageView
 
@@ -10,6 +11,8 @@ class Home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home)
+
+
         val menuHelper = MenuHandler(this)
         val navigationHelper = NavigationHelper(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_icon)
@@ -17,8 +20,11 @@ class Home : AppCompatActivity() {
         val goToTypeOfEvent = findViewById<Button>(R.id.button_my_events)
         val goToSearchEvent = findViewById<Button>(R.id.button_search_event)
         val goToGames = findViewById<Button>(R.id.button_games)
+        //val menuItem = MenuItem
 
         menuIcon.setOnClickListener {
+/*            menuHelper.setToolBar()
+            menuHelper.onOptionsItemSelected()*/
             menuHelper.showPopupMenu(it, navigationHelper)
         }
 

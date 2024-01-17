@@ -12,6 +12,7 @@ class NewEvent : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.new_event)
 
+
         val menuHelper = MenuHandler(this)
         val navigationHelper = NavigationHelper(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_icon)
