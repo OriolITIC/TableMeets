@@ -3,6 +3,9 @@ package com.example.tablemeets
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.tablemeets.controller.CreatedEventAdapter
 
 class EventsCreated: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,6 +17,20 @@ class EventsCreated: AppCompatActivity() {
         val menuIcon = findViewById<ImageView>(R.id.menu_icon)
         val arrowBack = findViewById<ImageView>(R.id.left_arrow)
         val homeLogo = findViewById<ImageView>(R.id.home_logo)
+
+        val recyclerView: RecyclerView = findViewById(R.id.recyclerViewEventsCreated)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+        val dbHelper = AppDatabaseHelper(this)
+
+        // Llamar al método loadDataFromDatabase
+        val eventList = dbHelper.getCreatedEvents() // Obtener la lista de eventos desde la base de datos
+
+        val adapter = CreatedEventAdapter(eventList)
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+        recyclerView.adapter = adapter
 
         arrowBack.setOnClickListener {
             navigationHelper.goToTypeOfEvent()
