@@ -12,12 +12,10 @@ import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 
-//class MenuHandler(private val context: Context) {
-
-
 class MenuHandler(private val context: Context) : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
+    private lateinit var navigationHelper: NavigationHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,16 +38,54 @@ class MenuHandler(private val context: Context) : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            android.R.id.home -> {
-                drawerLayout.openDrawer(GravityCompat.START)
-                return true
+            R.id.create_event -> {
+                navigationHelper.goToCreateEvent()
+                true
             }
+
+            R.id.events_created -> {
+                navigationHelper.goToEventsCreated()
+                true
+            }
+
+            R.id.attending_events -> {
+                navigationHelper.goToAttendingEvents()
+                true
+            }
+
+            R.id.search_event -> {
+                navigationHelper.goToSearchEvent()
+                true
+            }
+
+            R.id.games -> {
+                navigationHelper.goToGames()
+                true
+            }
+
+            R.id.profile -> {
+                navigationHelper.goToProfile()
+                true
+            }
+
+            R.id.settings -> {
+                navigationHelper.goToSettings()
+                true
+            }
+
+            R.id.logout -> {
+                navigationHelper.logout()
+                true
+            }
+
+            else -> false
         }
+
         return super.onOptionsItemSelected(item)
     }
 
 
-    fun showPopupMenu(view: View, navigationHelper: NavigationHelper) {
+    /*fun showPopupMenu(view: View, navigationHelper: NavigationHelper) {
         val popupMenu = PopupMenu(context, view)
         popupMenu.menuInflater.inflate(R.menu.menu_main, popupMenu.menu)
 
@@ -99,6 +135,6 @@ class MenuHandler(private val context: Context) : AppCompatActivity() {
             }
         }
         popupMenu.show()
-    }
+    }*/
 
 }
