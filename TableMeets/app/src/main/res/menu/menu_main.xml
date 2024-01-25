@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/create_event"
-            android:icon="@drawable/calendar"
-            android:title="Crear evento"
-            app:showAsAction="never" />
+        <!--        <item
+                    android:id="@+id/create_event"
+                    android:icon="@drawable/calendar"
+                    android:title="Crear evento"
+                    app:showAsAction="never" />-->
 
         <item
             android:id="@+id/events_created"
@@ -35,11 +36,11 @@
             android:icon="@drawable/profile_logo"
             android:title="Mi cuenta" />
 
-        <item
-            android:id="@+id/settings"
-            android:icon="@drawable/settings_logo"
-            android:title="Ajustes"
-            app:showAsAction="never" />
+        <!--        <item
+                    android:id="@+id/settings"
+                    android:icon="@drawable/settings_logo"
+                    android:title="Ajustes"
+                    app:showAsAction="never" />-->
 
         <item
             android:id="@+id/logout"
@@ -47,13 +48,20 @@
             android:title="Cerrar sesión" />
     </group>
 
-<!--    <item android:title="Other Options">-->
-<!--        <menu>-->
-<!--            <item-->
-<!--                android:id="@+id/settings"-->
-<!--                android:icon="@drawable/settings_logo"-->
-<!--                android:title="Settings" />-->
-<!--        </menu>-->
-<!--    </item>-->
+    <item android:title="Other Options">
+        <menu>
+            <item
+                android:id="@+id/create_event"
+                android:icon="@drawable/calendar"
+                android:title="Crear evento"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/settings"
+                android:icon="@drawable/settings_logo"
+                android:title="Ajustes"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
 </menu>
 
