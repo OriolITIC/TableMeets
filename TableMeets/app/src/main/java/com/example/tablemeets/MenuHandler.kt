@@ -16,12 +16,14 @@ import com.google.android.material.navigation.NavigationView
 
 
 class MenuHandler(private val context: Context) : AppCompatActivity() {
+
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.menu_layout)
+
         setToolBar()
 
         drawerLayout = findViewById(R.id.drawer_layout)
@@ -29,7 +31,7 @@ class MenuHandler(private val context: Context) : AppCompatActivity() {
 
     }
 
-    public fun setToolBar() {
+    fun setToolBar() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_home)
@@ -44,6 +46,8 @@ class MenuHandler(private val context: Context) : AppCompatActivity() {
                 drawerLayout.openDrawer(GravityCompat.START)
                 return true
             }
+
+
         }
         return super.onOptionsItemSelected(item)
     }

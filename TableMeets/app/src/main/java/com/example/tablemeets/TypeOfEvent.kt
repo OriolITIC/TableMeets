@@ -2,10 +2,12 @@ package com.example.tablemeets
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.ImageView
 
 class TypeOfEvent : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.type_of_event)
@@ -39,4 +41,5 @@ class TypeOfEvent : AppCompatActivity() {
 
 
     }
+
 }

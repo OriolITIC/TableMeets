@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.ImageView
 
 class Home : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home)
@@ -20,11 +21,9 @@ class Home : AppCompatActivity() {
         val goToTypeOfEvent = findViewById<Button>(R.id.button_my_events)
         val goToSearchEvent = findViewById<Button>(R.id.button_search_event)
         val goToGames = findViewById<Button>(R.id.button_games)
-        //val menuItem = MenuItem
+
 
         menuIcon.setOnClickListener {
-/*            menuHelper.setToolBar()
-            menuHelper.onOptionsItemSelected()*/
             menuHelper.showPopupMenu(it, navigationHelper)
         }
 
@@ -51,7 +50,4 @@ class Home : AppCompatActivity() {
         val intent = Intent(this, Games::class.java)
         startActivity(intent)
     }
-
-
-
 }

@@ -2,12 +2,14 @@ package com.example.tablemeets
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import com.google.android.material.textfield.TextInputLayout
 
 class NewEvent : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.new_event)
@@ -24,6 +26,7 @@ class NewEvent : AppCompatActivity() {
         val dateTextInput = findViewById<TextInputLayout>(R.id.DateTextInput)
         val descTextInput = findViewById<TextInputLayout>(R.id.DescTextInput)
         val removeData = findViewById<Button>(R.id.button_remove_all_inputs)
+
 
         menuIcon.setOnClickListener {
             menuHelper.showPopupMenu(it, navigationHelper)
@@ -43,4 +46,5 @@ class NewEvent : AppCompatActivity() {
         }
 
     }
+
 }

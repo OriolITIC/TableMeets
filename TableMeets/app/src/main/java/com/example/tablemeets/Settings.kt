@@ -2,9 +2,11 @@ package com.example.tablemeets
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.ImageView
 
 class Settings: AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings)
@@ -16,6 +18,7 @@ class Settings: AppCompatActivity() {
         val homeLogo = findViewById<ImageView>(R.id.home_logo)
 
 
+
         homeLogo.setOnClickListener {
             navigationHelper.goToHome()
         }
@@ -25,4 +28,5 @@ class Settings: AppCompatActivity() {
         }
 
     }
+
 }
