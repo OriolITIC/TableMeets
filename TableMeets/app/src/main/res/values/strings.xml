@@ -19,6 +19,8 @@
     <string name="join_our_community_title">Únete a la Comunidad\n</string>
     <string name="join_our_community_description_part1">¡Únete a nuestra creciente comunidad de jugadores de mesa!</string>
     <string name="join_our_community_description_part2">Explora, participa en eventos emocionantes y conecta con personas apasionadas como tú.</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
 
 </resources>
