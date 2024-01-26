@@ -106,3 +106,71 @@ class MenuHandler(private val context: Context) : AppCompatActivity() {
     }
 
 }
+
+
+
+/*
+class MenuHandler(private val context: Context) : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener{
+
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var navigationView: NavigationView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.menu_layout)
+
+        drawerLayout = findViewById(R.id.drawer_layout)
+        navigationView = findViewById(R.id.nav_view)
+        navigationView.setNavigationItemSelectedListener(this)
+
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
+        val toggle = ActionBarDrawerToggle(this,
+            drawerLayout,toolbar,R.string.what_we_offer,R.string.our_mission_description_part1)
+
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+
+        if (savedInstanceState == null){
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container,()).commit()
+            navigationView.setCheckedItem(R.id.nav_home)
+        }
+
+    }
+
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.nav_home -> supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container,HomeFragment()).commit()
+
+            R.id.nav_setting -> supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container,SettingFragment()).commit()
+
+            R.id.nav_share -> supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container,ShareFragment()).commit()
+
+            R.id.nav_about -> supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container,AboutFragment()).commit()
+
+            R.id.nav_logout -> Toast.makeText(this,
+                "Logout",Toast.LENGTH_SHORT).show()
+        }
+        drawerLayout.closeDrawer(GravityCompat.START)
+        return true
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START)
+        }
+        else{
+            onBackPressedDispatcher.onBackPressed()
+        }
+    }
+
+}
+ */
