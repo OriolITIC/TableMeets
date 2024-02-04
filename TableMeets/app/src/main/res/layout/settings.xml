@@ -40,15 +40,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/left_arrow"
-            android:layout_width="66dp"
-            android:layout_height="66dp"
-            android:layout_marginStart="6dp"
-            android:src="@drawable/left_arrow"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/settings_ImageView" />
-
         <TextView
             android:id="@+id/settings_TextView"
             android:layout_width="162dp"
@@ -76,7 +67,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/ConstraintLayoutDown"
         android:layout_width="wrap_content"
-        android:layout_height="371dp"
+        android:layout_height="486dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="14dp"
         android:layout_marginRight="40dp">

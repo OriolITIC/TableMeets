@@ -2,6 +2,7 @@ package com.example.tablemeets.data
 
 data class AttendingEvent(
     val id: Long,
+    val eventName: String,
     val gameName: String,
     val location: String,
     val date: String,

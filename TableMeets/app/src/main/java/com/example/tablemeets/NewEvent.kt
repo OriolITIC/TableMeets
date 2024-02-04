@@ -16,7 +16,6 @@ class NewEvent : AppCompatActivity() {
         val menuHelper = MenuHandler(this)
         val navigationHelper = NavigationHelper(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_icon)
-        val arrowBack = findViewById<ImageView>(R.id.left_arrow)
         val homeLogo = findViewById<ImageView>(R.id.home_logo)
         val nameTextInput = findViewById<TextInputLayout>(R.id.NameTextInput)
         val gameTextInput = findViewById<TextInputLayout>(R.id.GameTextInput)
@@ -31,15 +30,7 @@ class NewEvent : AppCompatActivity() {
             menuHelper.showPopupMenu(it, navigationHelper)
         }
 
-        arrowBack.setOnClickListener {
-            navigationHelper.goToHome()
-        }
-
         homeLogo.setOnClickListener {
-            navigationHelper.goToHome()
-        }
-
-        arrowBack.setOnClickListener {
             navigationHelper.goToHome()
         }
 
@@ -53,7 +44,6 @@ class NewEvent : AppCompatActivity() {
         }
 
         createEvent.setOnClickListener {
-            // Obtener los valores de los TextInputLayouts
             val name = nameTextInput.editText?.text.toString()
             val gameName = gameTextInput.editText?.text.toString()
             val location = locationTextInput.editText?.text.toString()
@@ -61,15 +51,14 @@ class NewEvent : AppCompatActivity() {
             val date = dateTextInput.editText?.text.toString()
             val description = descTextInput.editText?.text.toString()
 
-            // Validar si los campos obligatorios no están vacíos
             if (name.isNotEmpty() && gameName.isNotEmpty() && location.isNotEmpty() &&
                 time.isNotEmpty() && date.isNotEmpty() && description.isNotEmpty()) {
 
                 // Insertar el evento en la base de datos
                 val dbHelper = AppDatabaseHelper(this)
-                dbHelper.addCreatedEvent(gameName, location, date, time, description)
+                dbHelper.addCreatedEvent(name, gameName, location, date, time, description)
 
-                // Notificar al usuario que el evento se creó exitosamente (puedes mostrar un Toast, por ejemplo)
+                // Notificar al usuario que el evento se creó exitosamente
                 Toast.makeText(this, "Evento creado exitosamente", Toast.LENGTH_SHORT).show()
 
                 // Limpiar los TextInputLayouts después de la inserción
@@ -81,10 +70,11 @@ class NewEvent : AppCompatActivity() {
                 descTextInput.editText?.text?.clear()
 
             } else {
-                // Notificar al usuario que algunos campos están vacíos (puedes mostrar un mensaje de error)
+                // Notificar al usuario que algunos campos están vacíos
                 Toast.makeText(this, "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show()
             }
         }
+
 
     }
 }

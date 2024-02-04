@@ -40,15 +40,6 @@
         android:layout_height="162dp">
 
         <ImageView
-            android:id="@+id/left_arrow"
-            android:layout_width="66dp"
-            android:layout_height="66dp"
-            android:layout_marginStart="6dp"
-            android:src="@drawable/left_arrow"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
             android:id="@+id/imageView"
             android:layout_width="151dp"
             android:layout_height="110dp"
@@ -73,8 +64,8 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="336dp"
+        android:layout_width="343dp"
+        android:layout_height="452dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="24dp"
         android:layout_marginRight="40dp">

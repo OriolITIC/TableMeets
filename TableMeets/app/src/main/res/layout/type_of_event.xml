@@ -45,15 +45,6 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/left_arrow"
-            android:layout_width="66dp"
-            android:layout_height="66dp"
-            android:layout_marginStart="6dp"
-            android:src="@drawable/left_arrow"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
             android:id="@+id/type_of_event_imageView"
             android:layout_width="0dp"
             android:layout_height="78dp"
@@ -70,7 +61,7 @@
             android:fontFamily="@font/montserrat_medium"
             android:gravity="center_horizontal"
             android:text="Tipo de evento"
-            android:textSize="28sp"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/type_of_event_imageView" />
@@ -78,7 +69,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="398dp"
+        android:layout_height="508dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="0dp"
         android:layout_marginRight="50dp"

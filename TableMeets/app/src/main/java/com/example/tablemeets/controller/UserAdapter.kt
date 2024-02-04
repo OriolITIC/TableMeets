@@ -1,4 +1,4 @@
 package com.example.tablemeets.controller
 
-class UsersAdapter {
+class UserAdapter {
 }

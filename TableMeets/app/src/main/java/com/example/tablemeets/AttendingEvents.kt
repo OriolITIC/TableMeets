@@ -6,8 +6,9 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tablemeets.controller.AttendingEventAdapter
+import com.example.tablemeets.controller.GameAdapter
 
-class AttendingEvents: AppCompatActivity() {
+class AttendingEvents : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.attending_events)
@@ -15,22 +16,35 @@ class AttendingEvents: AppCompatActivity() {
         val menuHelper = MenuHandler(this)
         val navigationHelper = NavigationHelper(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_icon)
-        val arrowBack = findViewById<ImageView>(R.id.left_arrow)
         val homeLogo = findViewById<ImageView>(R.id.home_logo)
 
-        val recyclerView: RecyclerView = findViewById(R.id.recyclerViewAttendingEvents)
+        val eventsList = listOf(
+            "Evento1",
+            "Evento2",
+            "Evento3",
+            "Evento4",
+            "Evento5",
+            "Evento6",
+            "Evento7",
+            "Evento8",
+            "Evento9",
+            "Evento10",
+            "Evento11",
+            "Evento12",
+            "Evento13",
+            "Evento14",
+            "Evento15",
+        )
+
+        val recyclerView: RecyclerView =
+            findViewById(R.id.recyclerViewAttendingEvents)
         recyclerView.layoutManager = LinearLayoutManager(this)
-
-        // Supongamos que tienes una lista de eventos a los que te has unido
-        val attendingEventList = listOf("Evento X", "Evento Y", "Evento Z", "Evento W", "Evento V",
-            "Evento K", "Evento D", "Evento B", "Evento E", "Evento J")
-
-        val adapter = AttendingEventAdapter(attendingEventList)
+        val adapter = GameAdapter(eventsList, object : GameAdapter.OnGameClickListener {
+            override fun onGameClick(position: Int) {
+                // Manejar el clic del juego aquí si es necesario
+            }
+        })
         recyclerView.adapter = adapter
-
-        arrowBack.setOnClickListener {
-            navigationHelper.goToTypeOfEvent()
-        }
 
         homeLogo.setOnClickListener {
             navigationHelper.goToHome()
@@ -39,6 +53,5 @@ class AttendingEvents: AppCompatActivity() {
         menuIcon.setOnClickListener {
             menuHelper.showPopupMenu(it, navigationHelper)
         }
-
     }
 }

@@ -12,12 +12,7 @@ class Settings: AppCompatActivity() {
         val menuHelper = MenuHandler(this)
         val navigationHelper = NavigationHelper(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_logo)
-        val arrowBack = findViewById<ImageView>(R.id.left_arrow)
         val homeLogo = findViewById<ImageView>(R.id.home_logo)
-
-        arrowBack.setOnClickListener {
-            navigationHelper.goToHome()
-        }
 
         homeLogo.setOnClickListener {
             navigationHelper.goToHome()

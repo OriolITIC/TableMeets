@@ -95,6 +95,15 @@
             android:exported="true">
         </activity>
 
+        <activity
+            android:name=".DescriptionCreatedEvent"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".DescriptionAttendingEvent"
+            android:exported="true">
+        </activity>
+
     </application>
 
 </manifest>

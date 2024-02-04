@@ -17,6 +17,8 @@ interface INavigationHelper {
     fun goToLogin()
     fun logout()
     fun goToAboutUs()
+    fun goToDescriptionCreatedEvent()
+    fun goToDescriptionAttendingEvent()
 
 
 
