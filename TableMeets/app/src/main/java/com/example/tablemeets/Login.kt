@@ -3,11 +3,13 @@ package com.example.tablemeets
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
 
 class Login : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
@@ -39,8 +41,6 @@ class Login : AppCompatActivity() {
 
     }
 
-
-
     private fun goToHome() {
         val intent = Intent(this, Home::class.java)
         startActivity(intent)
@@ -55,4 +55,5 @@ class Login : AppCompatActivity() {
         val intent = Intent(this, ForgotPassword::class.java)
         startActivity(intent)
     }
+
 }

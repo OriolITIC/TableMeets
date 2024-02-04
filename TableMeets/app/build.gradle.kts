@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.tablemeets"
-        minSdk = 25
+        minSdk = 26
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
@@ -34,14 +34,12 @@ android {
         jvmTarget = "1.8"
     }
 }
-//implementation("com.android.support:appcompat-v7:28.0.0")
-//    implementation("com.android.support:appcompat-v4:27.1.1")
-//    implementation("com.android.support:design:27.1.1")
+
 dependencies {
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.10.0")
+    implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

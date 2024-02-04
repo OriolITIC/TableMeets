@@ -1,7 +1,14 @@
 package com.example.tablemeets
 
+import android.view.MenuItem
+
 // MenuClickListener.kt
 interface INavigationHelper {
+
+    /*fun setToolBar()
+
+    fun onOptionsItemSelected(item: MenuItem)*/
+
     fun goToHome()
     fun goToCreateEvent()
     fun goToTypeOfEvent()
@@ -17,6 +24,8 @@ interface INavigationHelper {
     fun goToLogin()
     fun logout()
     fun goToAboutUs()
+    fun goToDescriptionCreatedEvent()
+    fun goToDescriptionAttendingEvent()
 
 
 

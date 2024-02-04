@@ -32,7 +32,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/button_logo"
         android:layout_width="wrap_content"
-        android:layout_height="523dp"
+        android:layout_height="636dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:orientation="vertical"

@@ -9,12 +9,10 @@ class EditProfile: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.edit_profile)
 
-
         val menuHelper = MenuHandler(this)
         val navigationHelper = NavigationHelper(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_icon)
         val homeLogo = findViewById<ImageView>(R.id.home_logo)
-
 
         homeLogo.setOnClickListener {
             navigationHelper.goToHome()

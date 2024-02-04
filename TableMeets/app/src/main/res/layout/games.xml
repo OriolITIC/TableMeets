@@ -84,13 +84,13 @@
                 android:layout_height="56dp"
                 android:layout_marginEnd="8dp"
                 android:hint="@string/name"
-                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintEnd_toStartOf="@+id/search_game_icon"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textInputEditText"
+                    android:id="@+id/textInputGame"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:cursorVisible="true"
@@ -99,10 +99,11 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="84dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="4dp"
+                android:id="@+id/search_game_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
                 android:src="@drawable/search_button"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -112,9 +113,10 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="320dp"
-            android:layout_height="316dp"
-            android:layout_marginTop="14dp"
+            android:id="@+id/recyclerViewGames"
+            android:layout_width="323dp"
+            android:layout_height="415dp"
+            android:layout_marginTop="22dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"

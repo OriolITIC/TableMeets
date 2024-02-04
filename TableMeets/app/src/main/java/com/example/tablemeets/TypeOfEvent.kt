@@ -10,7 +10,6 @@ class TypeOfEvent : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.type_of_event)
 
-
         val menuHelper = MenuHandler(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_logo)
         val navigationHelper = NavigationHelper(this)
@@ -18,13 +17,12 @@ class TypeOfEvent : AppCompatActivity() {
         val goToAttendingEvents = findViewById<Button>(R.id.button_attending_events)
         val homeLogo = findViewById<ImageView>(R.id.home_logo)
 
-
         homeLogo.setOnClickListener {
             navigationHelper.goToHome()
         }
 
         menuIcon.setOnClickListener {
-            menuHelper.showPopupMenu(it, navigationHelper)
+            menuHelper.showMenu()
         }
 
         goToEventsCreatedByMe.setOnClickListener {

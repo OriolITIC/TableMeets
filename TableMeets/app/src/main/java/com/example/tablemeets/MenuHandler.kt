@@ -1,91 +1,106 @@
 package com.example.tablemeets
 
 import android.content.Context
+import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import android.widget.PopupMenu
-import androidx.core.view.GravityCompat
+import android.view.LayoutInflater
 
-import android.os.Bundle
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 
-class MenuHandler(private val context: Context) : AppCompatActivity() {
+class MenuHandler(private val context: Context) : NavigationView.OnNavigationItemSelectedListener {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
-    private lateinit var navigationHelper: NavigationHelper
+    private lateinit var toolbar: Toolbar
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.menu_layout)
-        setToolBar()
+    fun showMenu() {
+        val inflater = LayoutInflater.from(context)
+        val menuView = inflater.inflate(R.layout.menu_layout, null)
 
-        drawerLayout = findViewById(R.id.drawer_layout)
-        navigationView = findViewById(R.id.nav_view)
+        drawerLayout = menuView.findViewById(R.id.drawer_layout)
+        navigationView = menuView.findViewById(R.id.nav_view)
+        toolbar = menuView.findViewById(R.id.toolbar)
 
+        // Configura el toolbar como la ActionBar de la actividad
+        (context as AppCompatActivity).setSupportActionBar(toolbar)
+
+        // Configura el ActionBarDrawerToggle con el Toolbar
+        val toggle = ActionBarDrawerToggle(
+            context, drawerLayout, toolbar,
+            R.string.navigation_drawer_open,
+            R.string.navigation_drawer_close
+        )
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+
+        // Abre el cajón de navegación
+        drawerLayout.openDrawer(GravityCompat.START)
+
+        // Asegura que el NavigationView esté delante de otras vistas
+        navigationView.bringToFront()
+
+        navigationView.setNavigationItemSelectedListener(this)
     }
 
-    public fun setToolBar() {
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_home)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-    }
+    
 
-    //Then Generate --> Override Methods : ----> search for (onOptions) method :
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
+    override fun onNavigationItemSelected(menuItem: MenuItem): Boolean {
+        // Handle navigation view item clicks here.
+        when (menuItem.itemId) {
             R.id.create_event -> {
-                navigationHelper.goToCreateEvent()
+                // Handle click on create event menu item
                 true
             }
-
             R.id.events_created -> {
-                navigationHelper.goToEventsCreated()
+                // Handle click on events created menu item
                 true
             }
-
             R.id.attending_events -> {
-                navigationHelper.goToAttendingEvents()
+                // Handle click on attending events menu item
                 true
             }
-
             R.id.search_event -> {
-                navigationHelper.goToSearchEvent()
+                // Handle click on search event menu item
                 true
             }
-
             R.id.games -> {
-                navigationHelper.goToGames()
+                // Handle click on games menu item
                 true
             }
-
             R.id.profile -> {
-                navigationHelper.goToProfile()
+                // Handle click on profile menu item
                 true
             }
-
             R.id.settings -> {
-                navigationHelper.goToSettings()
+                // Handle click on settings menu item
                 true
             }
-
             R.id.logout -> {
-                navigationHelper.logout()
+                // Handle click on logout menu item
                 true
             }
-
             else -> false
         }
 
-        return super.onOptionsItemSelected(item)
+        // Cerrar el DrawerLayout después de hacer clic en un elemento del menú
+        drawerLayout.closeDrawer(GravityCompat.START)
+        return true
     }
 
 
-    /*fun showPopupMenu(view: View, navigationHelper: NavigationHelper) {
+
+
+
+
+    // this method is not necessary if we use (setNavigationItemSelectedListener)
+    // method to display options ---> but there are some complications...
+    fun showPopupMenu(view: View, navigationHelper: NavigationHelper) {
         val popupMenu = PopupMenu(context, view)
         popupMenu.menuInflater.inflate(R.menu.menu_main, popupMenu.menu)
 
@@ -135,6 +150,5 @@ class MenuHandler(private val context: Context) : AppCompatActivity() {
             }
         }
         popupMenu.show()
-    }*/
-
+    }
 }
