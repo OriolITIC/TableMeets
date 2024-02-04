@@ -41,7 +41,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="0dp"
@@ -67,8 +66,8 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="337dp"
-        android:layout_height="354dp"
+        android:layout_width="match_parent"
+        android:layout_height="470dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="14dp"
         android:layout_marginRight="40dp">

@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import android.widget.PopupMenu
+
+import android.view.LayoutInflater
+
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -17,6 +20,7 @@ class MenuHandler(private val context: Context) : AppCompatActivity() {
     // needed if setNavigationItemSelectedListener method is used :
     //private var navigationHelper: NavigationHelper
 
+class MenuHandler(private val context: Context) : NavigationView.OnNavigationItemSelectedListener {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
     private lateinit var toolbar: Toolbar
@@ -34,11 +38,27 @@ class MenuHandler(private val context: Context) : AppCompatActivity() {
 
         val toggle = ActionBarDrawerToggle(
             this, drawerLayout, toolbar,
+    fun showMenu() {
+        val inflater = LayoutInflater.from(context)
+        val menuView = inflater.inflate(R.layout.menu_layout, null)
+
+        drawerLayout = menuView.findViewById(R.id.drawer_layout)
+        navigationView = menuView.findViewById(R.id.nav_view)
+        toolbar = menuView.findViewById(R.id.toolbar)
+
+        // Configura el toolbar como la ActionBar de la actividad
+        (context as AppCompatActivity).setSupportActionBar(toolbar)
+
+        // Configura el ActionBarDrawerToggle con el Toolbar
+        val toggle = ActionBarDrawerToggle(
+            context, drawerLayout, toolbar,
+
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
         )
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
+
 
         navigationView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
@@ -88,10 +108,13 @@ class MenuHandler(private val context: Context) : AppCompatActivity() {
 
     }
 
-    private fun setToolBar() {
-        setSupportActionBar(toolbar)
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_home)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        // Abre el cajón de navegación
+        drawerLayout.openDrawer(GravityCompat.START)
+
+        // Asegura que el NavigationView esté delante de otras vistas
+        navigationView.bringToFront()
+
+        navigationView.setNavigationItemSelectedListener(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -102,7 +125,49 @@ class MenuHandler(private val context: Context) : AppCompatActivity() {
             }
 
             else -> super.onOptionsItemSelected(item)
+
+    override fun onNavigationItemSelected(menuItem: MenuItem): Boolean {
+        // Handle navigation view item clicks here.
+        when (menuItem.itemId) {
+            R.id.create_event -> {
+                // Handle click on create event menu item
+                true
+            }
+            R.id.events_created -> {
+                // Handle click on events created menu item
+                true
+            }
+            R.id.attending_events -> {
+                // Handle click on attending events menu item
+                true
+            }
+            R.id.search_event -> {
+                // Handle click on search event menu item
+                true
+            }
+            R.id.games -> {
+                // Handle click on games menu item
+                true
+            }
+            R.id.profile -> {
+                // Handle click on profile menu item
+                true
+            }
+            R.id.settings -> {
+                // Handle click on settings menu item
+                true
+            }
+            R.id.logout -> {
+                // Handle click on logout menu item
+                true
+            }
+            else -> false
+
         }
+
+        // Cerrar el DrawerLayout después de hacer clic en un elemento del menú
+        drawerLayout.closeDrawer(GravityCompat.START)
+        return true
     }
 
     // this method is not necessary if we use (setNavigationItemSelectedListener)
