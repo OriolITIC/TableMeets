@@ -87,7 +87,9 @@
         android:background="@drawable/footer_background"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></LinearLayout>
+        app:layout_constraintStart_toStartOf="parent">
+
+    </LinearLayout>
 
 
 </LinearLayout>

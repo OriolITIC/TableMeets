@@ -18,7 +18,7 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             android:elevation="4dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
@@ -33,51 +33,21 @@
 
     <!--If we add (app:itemIconTint="@null")means no color but it gives some issue-->
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/nav_view"
-        app:itemIconTint="@null"
+        android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/header_navigation_drawer"
-        app:menu="@menu/menu_main"
-        android:layout_gravity="start">
+        app:itemIconTint="@color/purple"
+        app:menu="@menu/menu_main">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:orientation="vertical" />
 
     </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>
-
-
-<!--
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/drawer_layout"
-    android:fitsSystemWindows="true">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/content_frame"
-        android:orientation="vertical">
-
-        <include
-            android:id="@+id/toolbar"
-            layout="@layout/toolbar"/>
-
-    </LinearLayout>
-
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/nav_view"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/header_navigation_drawer"
-        app:menu="@menu/menu_main"
-        android:layout_gravity="start">
-
-    </com.google.android.material.navigation.NavigationView>
-
-</androidx.drawerlayout.widget.DrawerLayout>-->

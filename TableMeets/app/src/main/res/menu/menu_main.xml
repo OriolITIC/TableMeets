@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
+
 
         <item
             android:id="@+id/create_event"
             android:icon="@drawable/calendar"
-            android:title="Crear evento"
-            app:showAsAction="never" />
+            android:title="Crear evento"/>
 
         <item
             android:id="@+id/events_created"
@@ -18,8 +17,7 @@
         <item
             android:id="@+id/attending_events"
             android:icon="@drawable/type_of_event_logo"
-            android:title="Eventos unidos"
-            app:showAsAction="never" />
+            android:title="Eventos unidos"/>
 
         <item
             android:id="@+id/search_event"
@@ -29,8 +27,7 @@
         <item
             android:id="@+id/games"
             android:icon="@drawable/games_logo"
-            android:title="Juegos"
-            app:showAsAction="never" />
+            android:title="Juegos"/>
 
         <item
             android:id="@+id/profile"
@@ -39,7 +36,8 @@
 
     </group>
 
-    <item android:title="Other Options">
+
+    <item android:title="More Options">
 
         <menu>
 
@@ -51,8 +49,7 @@
             <item
                 android:id="@+id/settings"
                 android:icon="@drawable/settings_logo"
-                android:title="Ajustes"
-                app:showAsAction="never" />
+                android:title="Ajustes"/>
 
         </menu>
 
