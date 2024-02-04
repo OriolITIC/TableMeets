@@ -78,6 +78,16 @@ class NavigationHelper(private val context: Context) : INavigationHelper{
         context.startActivity(intent)
     }
 
+    override fun goToDescriptionCreatedEvent() {
+        val intent = Intent(context, DescriptionCreatedEvent::class.java)
+        context.startActivity(intent)
+    }
+
+    override fun goToDescriptionAttendingEvent() {
+        val intent = Intent(context, DescriptionAttendingEvent::class.java)
+        context.startActivity(intent)
+    }
+
     override fun logout (){
         goToLogin()
     }

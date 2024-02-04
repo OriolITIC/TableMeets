@@ -1,20 +1,17 @@
 package com.example.tablemeets
 
-import MenuHandler
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
 
 class NewEvent : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.new_event)
-
 
         val menuHelper = MenuHandler(this)
         val navigationHelper = NavigationHelper(this)
@@ -27,7 +24,7 @@ class NewEvent : AppCompatActivity() {
         val dateTextInput = findViewById<TextInputLayout>(R.id.DateTextInput)
         val descTextInput = findViewById<TextInputLayout>(R.id.DescTextInput)
         val removeData = findViewById<Button>(R.id.button_remove_all_inputs)
-
+        val createEvent = findViewById<Button>(R.id.button_create_event)
 
         menuIcon.setOnClickListener {
             menuHelper.showPopupMenu(it, navigationHelper)
@@ -46,6 +43,38 @@ class NewEvent : AppCompatActivity() {
             descTextInput.editText?.text?.clear()
         }
 
-    }
+        createEvent.setOnClickListener {
+            val name = nameTextInput.editText?.text.toString()
+            val gameName = gameTextInput.editText?.text.toString()
+            val location = locationTextInput.editText?.text.toString()
+            val time = timeTextInput.editText?.text.toString()
+            val date = dateTextInput.editText?.text.toString()
+            val description = descTextInput.editText?.text.toString()
 
+            if (name.isNotEmpty() && gameName.isNotEmpty() && location.isNotEmpty() &&
+                time.isNotEmpty() && date.isNotEmpty() && description.isNotEmpty()) {
+
+                // Insertar el evento en la base de datos
+                val dbHelper = AppDatabaseHelper(this)
+                dbHelper.addCreatedEvent(name, gameName, location, date, time, description)
+
+                // Notificar al usuario que el evento se creó exitosamente
+                Toast.makeText(this, "Evento creado exitosamente", Toast.LENGTH_SHORT).show()
+
+                // Limpiar los TextInputLayouts después de la inserción
+                nameTextInput.editText?.text?.clear()
+                gameTextInput.editText?.text?.clear()
+                locationTextInput.editText?.text?.clear()
+                timeTextInput.editText?.text?.clear()
+                dateTextInput.editText?.text?.clear()
+                descTextInput.editText?.text?.clear()
+
+            } else {
+                // Notificar al usuario que algunos campos están vacíos
+                Toast.makeText(this, "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+
+    }
 }

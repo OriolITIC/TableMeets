@@ -4,55 +4,61 @@
 
     <group android:checkableBehavior="single">
 
+
         <item
             android:id="@+id/create_event"
             android:icon="@drawable/calendar"
-            android:title="Crear evento"
-            app:showAsAction="never" />
+            app:showAsAction="always"
+            android:title="Crear evento"/>
 
         <item
             android:id="@+id/events_created"
+            app:showAsAction="always"
             android:icon="@drawable/events_created_logo"
             android:title="Eventos creados" />
 
         <item
             android:id="@+id/attending_events"
+            app:showAsAction="always"
             android:icon="@drawable/type_of_event_logo"
-            android:title="Eventos unidos"
-            app:showAsAction="never" />
+            android:title="Eventos unidos"/>
 
         <item
             android:id="@+id/search_event"
+            app:showAsAction="always"
             android:icon="@drawable/search_logo"
             android:title="Buscar evento" />
 
         <item
             android:id="@+id/games"
+            app:showAsAction="always"
             android:icon="@drawable/games_logo"
-            android:title="Juegos"
-            app:showAsAction="never" />
+            android:title="Juegos"/>
 
         <item
             android:id="@+id/profile"
+            app:showAsAction="always"
             android:icon="@drawable/profile_logo"
             android:title="Mi cuenta" />
 
     </group>
 
-    <item android:title="Other Options">
+
+    <item android:title="More Options">
 
         <menu>
 
             <item
                 android:id="@+id/logout"
+                app:showAsAction="always"
                 android:icon="@drawable/profile_logo"
                 android:title="Cerrar sesión" />
 
             <item
                 android:id="@+id/settings"
+                app:showAsAction="always"
                 android:icon="@drawable/settings_logo"
-                android:title="Ajustes"
-                app:showAsAction="never" />
+                android:title="Ajustes"/>
 
         </menu>
 

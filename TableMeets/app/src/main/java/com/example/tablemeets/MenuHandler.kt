@@ -1,184 +1,105 @@
-/*package com.example.tablemeets
-
-import android.content.Context
-import android.view.MenuItem
-import android.view.View
-import android.widget.PopupMenu
-import androidx.core.view.GravityCompat
-
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import androidx.drawerlayout.widget.DrawerLayout
-import com.google.android.material.navigation.NavigationView
-
-//class MenuHandler(private val context: Context) {
-
-
-class MenuHandler(private val context: Context) : AppCompatActivity() {
-
-    private lateinit var drawerLayout: DrawerLayout
-    private lateinit var navigationView: NavigationView
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.menu_layout)
-
-        setToolBar()
-
-        drawerLayout = findViewById(R.id.drawer_layout)
-        navigationView = findViewById(R.id.nav_view)
-
-    }
-
-    fun setToolBar() {
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_home)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-    }
-
-    //Then Generate --> Override Methods : ----> search for (onOptions) method :
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            android.R.id.home -> {
-                drawerLayout.openDrawer(GravityCompat.START)
-                return true
-            }
-
-
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
-
-    fun showPopupMenu(view: View, navigationHelper: NavigationHelper) {
-        val popupMenu = PopupMenu(context, view)
-        popupMenu.menuInflater.inflate(R.menu.menu_main, popupMenu.menu)
-
-        popupMenu.setOnMenuItemClickListener { item: MenuItem ->
-            when (item.itemId) {
-                R.id.create_event -> {
-                    navigationHelper.goToCreateEvent()
-                    true
-                }
-
-                R.id.events_created -> {
-                    navigationHelper.goToEventsCreated()
-                    true
-                }
-
-                R.id.attending_events -> {
-                    navigationHelper.goToAttendingEvents()
-                    true
-                }
-
-                R.id.search_event -> {
-                    navigationHelper.goToSearchEvent()
-                    true
-                }
-
-                R.id.games -> {
-                    navigationHelper.goToGames()
-                    true
-                }
-
-                R.id.profile -> {
-                    navigationHelper.goToProfile()
-                    true
-                }
-
-                R.id.settings -> {
-                    navigationHelper.goToSettings()
-                    true
-                }
-
-                R.id.logout -> {
-                    navigationHelper.logout()
-                    true
-                }
-
-                else -> false
-            }
-        }
-        popupMenu.show()
-    }
-
-}*/
-
-
-
+package com.example.tablemeets
 
 import android.content.Context
 import android.os.Bundle
-import android.view.Gravity
 import android.view.MenuItem
 import android.view.View
 import android.widget.PopupMenu
+import android.view.LayoutInflater
+
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import com.example.tablemeets.NavigationHelper
-import com.example.tablemeets.R
 import com.google.android.material.navigation.NavigationView
 
-class MenuHandler(private val context: Context) : AppCompatActivity() {
-
+class MenuHandler(private val context: Context) : NavigationView.OnNavigationItemSelectedListener {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
     private lateinit var toolbar: Toolbar
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.menu_layout)
+    fun showMenu() {
+        val inflater = LayoutInflater.from(context)
+        val menuView = inflater.inflate(R.layout.menu_layout, null)
 
-        // Initialize views
-        toolbar = findViewById(R.id.toolbar)
-        drawerLayout = findViewById(R.id.drawer_layout)
-        navigationView = findViewById(R.id.nav_view)
+        drawerLayout = menuView.findViewById(R.id.drawer_layout)
+        navigationView = menuView.findViewById(R.id.nav_view)
+        toolbar = menuView.findViewById(R.id.toolbar)
 
-        // Set up toolbar
-        setToolBar()
+        // Configura el toolbar como la ActionBar de la actividad
+        (context as AppCompatActivity).setSupportActionBar(toolbar)
 
-        // Set up the drawer toggle
+        // Configura el ActionBarDrawerToggle con el Toolbar
         val toggle = ActionBarDrawerToggle(
-            this, drawerLayout, toolbar,
+            context, drawerLayout, toolbar,
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
         )
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        // Set up the item click listener for the NavigationView
-        navigationView.setNavigationItemSelectedListener { menuItem ->
-            // Handle item click here if needed
-            when (menuItem.itemId) {
-                // Handle navigation items if needed
+        // Abre el cajón de navegación
+        drawerLayout.openDrawer(GravityCompat.START)
+
+        // Asegura que el NavigationView esté delante de otras vistas
+        navigationView.bringToFront()
+
+        navigationView.setNavigationItemSelectedListener(this)
+    }
+
+    
+
+    override fun onNavigationItemSelected(menuItem: MenuItem): Boolean {
+        // Handle navigation view item clicks here.
+        when (menuItem.itemId) {
+            R.id.create_event -> {
+                // Handle click on create event menu item
+                true
             }
-            true
-        }
-    }
-
-    private fun setToolBar() {
-        setSupportActionBar(toolbar)
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_home)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            android.R.id.home -> {
-                drawerLayout.openDrawer(GravityCompat.START)
-                return true
+            R.id.events_created -> {
+                // Handle click on events created menu item
+                true
             }
-            // Handle other menu items if needed
-            else -> return super.onOptionsItemSelected(item)
+            R.id.attending_events -> {
+                // Handle click on attending events menu item
+                true
+            }
+            R.id.search_event -> {
+                // Handle click on search event menu item
+                true
+            }
+            R.id.games -> {
+                // Handle click on games menu item
+                true
+            }
+            R.id.profile -> {
+                // Handle click on profile menu item
+                true
+            }
+            R.id.settings -> {
+                // Handle click on settings menu item
+                true
+            }
+            R.id.logout -> {
+                // Handle click on logout menu item
+                true
+            }
+            else -> false
         }
+
+        // Cerrar el DrawerLayout después de hacer clic en un elemento del menú
+        drawerLayout.closeDrawer(GravityCompat.START)
+        return true
     }
 
+
+
+
+
+
+    // this method is not necessary if we use (setNavigationItemSelectedListener)
+    // method to display options ---> but there are some complications...
     fun showPopupMenu(view: View, navigationHelper: NavigationHelper) {
         val popupMenu = PopupMenu(context, view)
         popupMenu.menuInflater.inflate(R.menu.menu_main, popupMenu.menu)
@@ -231,70 +152,3 @@ class MenuHandler(private val context: Context) : AppCompatActivity() {
         popupMenu.show()
     }
 }
-
-
-/*
-class MenuHandler(private val context: Context) : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener{
-
-    private lateinit var drawerLayout: DrawerLayout
-    private lateinit var navigationView: NavigationView
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.menu_layout)
-
-        drawerLayout = findViewById(R.id.drawer_layout)
-        navigationView = findViewById(R.id.nav_view)
-        navigationView.setNavigationItemSelectedListener(this)
-
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
-
-        val toggle = ActionBarDrawerToggle(this,
-            drawerLayout,toolbar,R.string.what_we_offer,R.string.our_mission_description_part1)
-
-        drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()
-
-        if (savedInstanceState == null){
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container,()).commit()
-            navigationView.setCheckedItem(R.id.nav_home)
-        }
-
-    }
-
-
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.nav_home -> supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container,HomeFragment()).commit()
-
-            R.id.nav_setting -> supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container,SettingFragment()).commit()
-
-            R.id.nav_share -> supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container,ShareFragment()).commit()
-
-            R.id.nav_about -> supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container,AboutFragment()).commit()
-
-            R.id.nav_logout -> Toast.makeText(this,
-                "Logout",Toast.LENGTH_SHORT).show()
-        }
-        drawerLayout.closeDrawer(GravityCompat.START)
-        return true
-    }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
-            drawerLayout.closeDrawer(GravityCompat.START)
-        }
-        else{
-            onBackPressedDispatcher.onBackPressed()
-        }
-    }
-
-}
- */

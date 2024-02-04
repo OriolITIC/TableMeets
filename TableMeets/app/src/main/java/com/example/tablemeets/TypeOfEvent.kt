@@ -1,18 +1,14 @@
 package com.example.tablemeets
 
-import MenuHandler
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
 import android.widget.Button
 import android.widget.ImageView
 
 class TypeOfEvent : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.type_of_event)
-
 
         val menuHelper = MenuHandler(this)
         val menuIcon = findViewById<ImageView>(R.id.menu_logo)
@@ -21,13 +17,12 @@ class TypeOfEvent : AppCompatActivity() {
         val goToAttendingEvents = findViewById<Button>(R.id.button_attending_events)
         val homeLogo = findViewById<ImageView>(R.id.home_logo)
 
-
         homeLogo.setOnClickListener {
             navigationHelper.goToHome()
         }
 
         menuIcon.setOnClickListener {
-            menuHelper.showPopupMenu(it, navigationHelper)
+            menuHelper.showMenu()
         }
 
         goToEventsCreatedByMe.setOnClickListener {
@@ -42,5 +37,4 @@ class TypeOfEvent : AppCompatActivity() {
 
 
     }
-
 }
