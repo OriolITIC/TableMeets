@@ -96,6 +96,15 @@
         </activity>
 
         <activity
+            android:name=".MenuHandler"
+            android:label="Table Meets"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
             android:name=".DescriptionCreatedEvent"
             android:exported="true">
         </activity>
