@@ -1,16 +1,20 @@
 package com.example.tablemeets
 
+import MenuHandler
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tablemeets.controller.GameAdapter
 
 class SearchEvent: AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.search_event)
+
 
         val menuHelper = MenuHandler(this)
         val navigationHelper = NavigationHelper(this)
@@ -53,4 +57,5 @@ class SearchEvent: AppCompatActivity() {
         })
         recyclerView.adapter = adapter
     }
+
 }
