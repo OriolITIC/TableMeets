@@ -6,6 +6,12 @@ import androidx.appcompat.widget.Toolbar
 
 class NavigationHelper(private val context: Context) : INavigationHelper{
 
+   /* override fun setToolBar() {
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_home)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }*/
 
     override fun goToHome() {
         val intent = Intent(context, Home::class.java)
@@ -80,10 +86,6 @@ class NavigationHelper(private val context: Context) : INavigationHelper{
     override fun goToDescriptionAttendingEvent() {
         val intent = Intent(context, DescriptionAttendingEvent::class.java)
         context.startActivity(intent)
-    }
-
-    override fun logout (){
-        goToLogin()
     }
 
 }

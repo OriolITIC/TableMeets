@@ -7,45 +7,45 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.tablemeets.AttendingEvents
 import com.example.tablemeets.DescriptionAttendingEvent
+import com.example.tablemeets.DescriptionCreatedEvent
 import com.example.tablemeets.R
-import com.example.tablemeets.data.AttendingEvent
+import com.example.tablemeets.data.Event
 
-class AttendingEventAdapter(private val attendingEventList: List<AttendingEvent>) :
-    RecyclerView.Adapter<AttendingEventAdapter.AttendingEventViewHolder>() {
+class AttendingEventAdapter(private val eventList: List<Event>) :
+    RecyclerView.Adapter<AttendingEventAdapter.EventViewHolder>() {
 
-    class AttendingEventViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val textView: TextView = itemView.findViewById(R.id.textViewEvent)
-        val aboutButton: Button = itemView.findViewById(R.id.about_event_button)
+    class EventViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val textView: TextView = itemView.findViewById(R.id.textViewAttendingEvent)
+        val aboutButton: Button = itemView.findViewById(R.id.about_attending_event_button)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AttendingEventViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_attending_event, parent, false)
-        return AttendingEventViewHolder(view)
+        return EventViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: AttendingEventViewHolder, position: Int) {
-        val event = attendingEventList[position]
+    override fun onBindViewHolder(holder: EventViewHolder, position: Int) {
+        val event = eventList[position]
 
         val formattedText = "${position + 1}. ${event.eventName}"
-
         holder.textView.text = formattedText
 
+        holder.aboutButton.text = "Asistente"
         holder.aboutButton.setOnClickListener {
             val context = holder.itemView.context
             val intent = Intent(context, DescriptionAttendingEvent::class.java)
             intent.putExtra("event_name", event.eventName)
             intent.putExtra("event_game", event.gameName)
             intent.putExtra("event_location", event.location)
-            intent.putExtra("event_time", event.time)
-            intent.putExtra("event_date", event.date)
+            intent.putExtra("event_date", event.eventDate)
+            intent.putExtra("event_time", event.eventTime)
             intent.putExtra("event_description", event.description)
             context.startActivity(intent)
         }
     }
 
     override fun getItemCount(): Int {
-        return attendingEventList.size
+        return eventList.size
     }
 }

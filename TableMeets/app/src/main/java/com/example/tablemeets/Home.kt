@@ -1,13 +1,13 @@
 package com.example.tablemeets
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-
 import android.util.Log
-
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
@@ -26,9 +26,22 @@ class Home : AppCompatActivity() {
         val goToTypeOfEvent = findViewById<Button>(R.id.button_my_events)
         val goToSearchEvent = findViewById<Button>(R.id.button_search_event)
         val goToGames = findViewById<Button>(R.id.button_games)
+        val helloUser = findViewById<TextView>(R.id.helloUser)
+
+        val authenticationHelper = AuthenticationHelper(this)
+        val username = authenticationHelper.getAuthenticatedUsername()
+
+
+        if (!username.isNullOrEmpty()) {
+
+            helloUser.text = "¡Hola $username!"
+        } else {
+
+            helloUser.text = "¡Hola!"
+        }
 
         menuIcon.setOnClickListener {
-            // Inflar y mostrar el menú
+
             showMenu()
         }
 

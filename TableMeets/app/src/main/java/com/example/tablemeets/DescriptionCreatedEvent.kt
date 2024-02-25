@@ -21,9 +21,7 @@ class DescriptionCreatedEvent : AppCompatActivity() {
         val description = intent.getStringExtra("event_description")
         val eventNameTextView = findViewById<TextView>(R.id.event_title)
 
-        // Verificar si eventName no es nulo antes de mostrarlo
         eventName?.let {
-            // Establecer el nombre del evento en el TextView
             eventNameTextView.text = it
         }
 
