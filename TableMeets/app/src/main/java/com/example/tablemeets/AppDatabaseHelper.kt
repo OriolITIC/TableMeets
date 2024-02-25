@@ -4,161 +4,232 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.example.tablemeets.data.AttendingEvent
-import com.example.tablemeets.data.CreatedEvent
+import android.util.Log
+import android.widget.Toast
+import com.example.tablemeets.data.Event
+
 
 class AppDatabaseHelper(context: Context?) : SQLiteOpenHelper(context, DATABASE_NAME,
     null, DATABASE_VERSION) {
 
     companion object {
-        const val DATABASE_NAME = "TableMeetsAppDatabase"
-        const val DATABASE_VERSION = 1
+        const val DATABASE_NAME = "TableMeetsDatabase"
+        const val DATABASE_VERSION = 2
     }
 
-    private val tableUsers = "CREATE TABLE Users (" +
-            "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
+    private val authenticationHelper: AuthenticationHelper = AuthenticationHelper(context)
+
+    val tableUsers = "CREATE TABLE Users (" +
+            "USER_ID INTEGER PRIMARY KEY AUTOINCREMENT," +
             "USERNAME TEXT," +
             "EMAIL TEXT," +
             "PASSWORD TEXT)"
 
-
-    private val tableCreatedEvents = "CREATE TABLE CreatedEvents (" +
-            "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
-            "EVENT_NAME TEXT," +
-            "GAME_NAME TEXT," +
-            "LOCATION TEXT," +
-            "DATE TEXT," +
-            "TIME TEXT," +
-            "DESCRIPTION TEXT)"
-
-    private val tableAttendingEvents = "CREATE TABLE AttendingEvents (" +
-            "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
+    val tableEvents = "CREATE TABLE Events (" +
+            "EVENT_ID INTEGER PRIMARY KEY AUTOINCREMENT," +
             "USER_ID INTEGER," +
-            "GAME_NAME TEXT," +
+            "EVENT_NAME TEXT," +
+            "GAME_ID INTEGER," +
             "LOCATION TEXT," +
-            "DATE TEXT," +
-            "TIME TEXT," +
+            "EVENT_DATE TEXT," +
+            "EVENT_TIME TEXT," +
             "DESCRIPTION TEXT," +
-            "FOREIGN KEY(USER_ID) REFERENCES Users(ID))"
+            "FOREIGN KEY(USER_ID) REFERENCES Users(USER_ID))"
+
+    val tableUserEvents = "CREATE TABLE UserEvent (" +
+            "USER_ID INTEGER," +
+            "EVENT_ID INTEGER," +
+            "FOREIGN KEY(USER_ID) REFERENCES Users(USER_ID)," +
+            "FOREIGN KEY(EVENT_ID) REFERENCES Events(EVENT_ID)," +
+            "PRIMARY KEY (USER_ID, EVENT_ID))"
+
+    val tableGames = "CREATE TABLE Games (" +
+            "GAME_ID INTEGER PRIMARY KEY AUTOINCREMENT," +
+            "Category TEXT," +
+            "Description TEXT," +
+            "Rules TEXT," +
+            "FOREIGN KEY(GAME_ID) REFERENCES Events(GAME_ID))"
 
     override fun onCreate(database: SQLiteDatabase?) {
+        Log.d("AppDatabaseHelper", "onCreate() called") // Agrega un log para verificar que onCreate() se está llamando correctamente
+
         database?.execSQL(tableUsers)
-        database?.execSQL(tableCreatedEvents)
-        database?.execSQL(tableAttendingEvents)
+        database?.execSQL(tableEvents)
+        database?.execSQL(tableGames)
+        database?.execSQL(tableUserEvents)
+
+        Log.d("AppDatabaseHelper", "Tables created successfully") // Agrega un log para verificar que las tablas se crean correctamente
     }
 
-    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-    }
+    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {}
 
-    fun addCreatedEvent(eventName: String, gameName: String, location: String, date: String,
-                        time: String, description: String): Long {
+    fun createEvent(context: Context, userId: Long, eventName: String, gameName: String, location: String, eventDate: String,
+                    eventTime: String, description: String): Long {
         val db = writableDatabase
-        val values = ContentValues().apply {
-            put("EVENT_NAME",eventName)
-            put("GAME_NAME", gameName)
-            put("LOCATION", location)
-            put("DATE", date)
-            put("TIME", time)
-            put("DESCRIPTION", description)
+        var eventId: Long = -1 // Inicializamos el ID del evento
+
+        db.beginTransaction()
+        try {
+            // Insertar el evento en la tabla Events
+            val values = ContentValues().apply {
+                put("USER_ID", userId)
+                put("EVENT_NAME", eventName)
+                put("GAME_NAME", gameName)
+                put("LOCATION", location)
+                put("EVENT_DATE", eventDate)
+                put("EVENT_TIME", eventTime)
+                put("DESCRIPTION", description)
+            }
+            eventId = db.insert("Events", null, values)
+
+            // Insertar la relación entre el usuario y el evento en la tabla UserEvent
+            if (eventId != -1L) {
+                val userEventValues = ContentValues().apply {
+                    put("USER_ID", userId)
+                    put("EVENT_ID", eventId)
+                }
+                db.insert("UserEvent", null, userEventValues)
+
+                db.setTransactionSuccessful()
+            }
+        } catch (e: Exception) {
+            Log.e("AppDatabaseHelper", "Error al insertar evento: ${e.message}")
+        } finally {
+            db.endTransaction()
         }
-        return db.insert("CreatedEvents", null, values)
+
+        // Verificar si el evento se ha insertado correctamente en ambas tablas
+        if (eventId != -1L) {
+            // Construir el mensaje con los parámetros del evento
+            val message = "Evento creado:\n" +
+                    "Nombre: $eventName\n" +
+                    "Juego: $gameName\n" +
+                    "Ubicación: $location\n" +
+                    "Fecha: $eventDate\n" +
+                    "Hora: $eventTime\n" +
+                    "Descripción: $description"
+
+            // Mostrar un Toast con el mensaje
+            Toast.makeText(context, message, Toast.LENGTH_LONG).show()
+        } else {
+            // Mostrar un Toast si hubo un problema al crear el evento
+            Toast.makeText(context, "Hubo un problema al crear el evento", Toast.LENGTH_SHORT).show()
+        }
+
+        return eventId
     }
 
-    fun addAttendingEvent(id: Int, idUsuario: Long, eventName: String, gameName: String,
-                          location: String, fecha: String, hora: String,
-                          description: String): Long {
-        val db = writableDatabase
-        val values = ContentValues().apply {
-            put("ID", id)
-            put("USER_ID", idUsuario)
-            put("EVENT_NAME",eventName)
-            put("GAME_NAME", gameName)
-            put("LOCATION", location)
-            put("DATE", fecha)
-            put("TIME", hora)
-            put("DESCRIPTION", description)
 
-        }
-        return db.insert("AttendingEvents", null, values)
-    }
-
-    fun getCreatedEvents(): List<CreatedEvent> {
-        val events = mutableListOf<CreatedEvent>()
+    fun getEvents(): List<Event> {
+        val events = mutableListOf<Event>()
         val db = readableDatabase
 
-        db.query("CreatedEvents", null, null, null, null,
-            null, null).use { cursor ->
-            val idIndex = cursor.getColumnIndex("ID")
+        db.query("Events", null, null, null, null, null, null)
+            .use { cursor ->
+                val eventIdIndex = cursor.getColumnIndex("EVENT_ID")
+                val userIdIndex = cursor.getColumnIndex("USER_ID")
+                val eventNameIndex = cursor.getColumnIndex("EVENT_NAME")
+                val gameNameIndex = cursor.getColumnIndex("GAME_NAME")
+                val locationIndex = cursor.getColumnIndex("LOCATION")
+                val dateIndex = cursor.getColumnIndex("EVENT_DATE")
+                val timeIndex = cursor.getColumnIndex("EVENT_TIME")
+                val descriptionIndex = cursor.getColumnIndex("DESCRIPTION")
+
+                while (cursor.moveToNext()) {
+                    val eventId = cursor.getLong(eventIdIndex)
+                    val userId = cursor.getLong(userIdIndex)
+                    val eventName = cursor.getString(eventNameIndex)
+                    val gameName = cursor.getString(gameNameIndex)
+                    val location = cursor.getString(locationIndex)
+                    val date = cursor.getString(dateIndex)
+                    val time = cursor.getString(timeIndex)
+                    val description = cursor.getString(descriptionIndex)
+
+                    val event = Event(eventId, userId, eventName, gameName, location, date, time, description)
+                    events.add(event)
+                }
+            }
+        return events
+    }
+
+
+    fun getEventsByUserId(userId: Long): List<Event> {
+        if (!authenticationHelper.isUserAuthenticated()) {
+            return emptyList()
+        }
+
+        val events = mutableListOf<Event>()
+        val db = readableDatabase
+
+        val selection = "USER_ID = ?"
+        val selectionArgs = arrayOf(userId.toString())
+
+        db.query("Events", null, selection, selectionArgs, null, null, null)
+            .use { cursor ->
+                val eventIdIndex = cursor.getColumnIndex("EVENT_ID")
+                val userIdIndex = cursor.getColumnIndex("USER_ID")
+                val eventNameIndex = cursor.getColumnIndex("EVENT_NAME")
+                val gameNameIndex = cursor.getColumnIndex("GAME_NAME")
+                val locationIndex = cursor.getColumnIndex("LOCATION")
+                val dateIndex = cursor.getColumnIndex("EVENT_DATE")
+                val timeIndex = cursor.getColumnIndex("EVENT_TIME")
+                val descriptionIndex = cursor.getColumnIndex("DESCRIPTION")
+
+                while (cursor.moveToNext()) {
+                    val eventId = cursor.getLong(eventIdIndex)
+                    val userId = cursor.getLong(userIdIndex)
+                    val eventName = cursor.getString(eventNameIndex)
+                    val gameName = cursor.getString(gameNameIndex)
+                    val location = cursor.getString(locationIndex)
+                    val date = cursor.getString(dateIndex)
+                    val time = cursor.getString(timeIndex)
+                    val description = cursor.getString(descriptionIndex)
+
+                    val event = Event(eventId, userId, eventName, gameName, location, date, time, description)
+                    events.add(event)
+                }
+            }
+        return events
+    }
+
+    fun getAttendingEvents(userId: Long): List<Event> {
+        val events = mutableListOf<Event>()
+        val db = readableDatabase
+
+        val query = """
+        SELECT * FROM Events
+        INNER JOIN UserEvent ON Events.EVENT_ID = UserEvent.EVENT_ID
+        WHERE UserEvent.USER_ID = ? AND Events.USER_ID != ?
+    """.trimIndent()
+
+        val selectionArgs = arrayOf(userId.toString(), userId.toString())
+
+        db.rawQuery(query, selectionArgs)?.use { cursor ->
+            val eventIdIndex = cursor.getColumnIndex("EVENT_ID")
             val eventNameIndex = cursor.getColumnIndex("EVENT_NAME")
             val gameNameIndex = cursor.getColumnIndex("GAME_NAME")
             val locationIndex = cursor.getColumnIndex("LOCATION")
-            val dateIndex = cursor.getColumnIndex("DATE")
-            val timeIndex = cursor.getColumnIndex("TIME")
+            val dateIndex = cursor.getColumnIndex("EVENT_DATE")
+            val timeIndex = cursor.getColumnIndex("EVENT_TIME")
             val descriptionIndex = cursor.getColumnIndex("DESCRIPTION")
 
             while (cursor.moveToNext()) {
-                val id = if (idIndex >= 0) cursor.getLong(idIndex) else -1
-                val eventName = if (eventNameIndex >= 0) cursor.getString(eventNameIndex) else ""
-                val gameName = if (gameNameIndex >= 0) cursor.getString(gameNameIndex) else ""
-                val location = if (locationIndex >= 0) cursor.getString(locationIndex) else ""
-                val date = if (dateIndex >= 0) cursor.getString(dateIndex) else ""
-                val time = if (timeIndex >= 0) cursor.getString(timeIndex) else ""
-                val description = if (descriptionIndex >= 0) cursor.getString(descriptionIndex) else ""
+                val eventId = cursor.getLong(eventIdIndex)
+                val eventName = cursor.getString(eventNameIndex)
+                val gameName = cursor.getString(gameNameIndex)
+                val location = cursor.getString(locationIndex)
+                val date = cursor.getString(dateIndex)
+                val time = cursor.getString(timeIndex)
+                val description = cursor.getString(descriptionIndex)
 
-
-                val createdEvent = CreatedEvent(id,eventName, gameName, location, date, time, description)
-                events.add(createdEvent)
-            }
-        }
-
-        return events
-    }
-
-    fun getAttendingEvents(): List<AttendingEvent> {
-        val events = mutableListOf<AttendingEvent>()
-        val db = readableDatabase
-
-        db.query("AttendingEvents", null, null, null, null,
-            null, null).use { cursor ->
-            val idIndex = cursor.getColumnIndex("ID")
-            val eventNameIndex = cursor.getColumnIndex("EVENT_NAME") // Asegúrate de que esta columna exista en tu tabla
-            val gameNameIndex = cursor.getColumnIndex("GAME_NAME")
-            val locationIndex = cursor.getColumnIndex("LOCATION")
-            val dateIndex = cursor.getColumnIndex("DATE")
-            val timeIndex = cursor.getColumnIndex("TIME")
-            val descriptionIndex = cursor.getColumnIndex("DESCRIPTION")
-            val userIdIndex = cursor.getColumnIndex("USER_ID")
-
-            while (cursor.moveToNext()) {
-                val id = if (idIndex >= 0) cursor.getLong(idIndex) else -1
-                val eventName = if (eventNameIndex >= 0) cursor.getString(eventNameIndex) else "" // Obtener el valor de la columna EVENT_NAME
-                val gameName = if (gameNameIndex >= 0) cursor.getString(gameNameIndex) else ""
-                val location = if (locationIndex >= 0) cursor.getString(locationIndex) else ""
-                val date = if (dateIndex >= 0) cursor.getString(dateIndex) else ""
-                val time = if (timeIndex >= 0) cursor.getString(timeIndex) else ""
-                val description = if (descriptionIndex >= 0) cursor.getString(descriptionIndex) else ""
-                val userId = if (userIdIndex >= 0) cursor.getLong(userIdIndex) else -1
-
-                val event = AttendingEvent(id, eventName, gameName, location, date, time, description, userId)
+                val event = Event(eventId, userId, eventName, gameName, location, date, time, description)
                 events.add(event)
             }
         }
+
         return events
     }
 
 
 
-    fun deleteCreatedEvent(eventId: Long): Int {
-        val db = writableDatabase
-        return db.delete("CreatedEvents", "ID = ?", arrayOf(eventId.toString()))
-    }
-
-
-    fun loadDataFromDatabase() {
-        val createdEvents = getCreatedEvents()
-        for (event in createdEvents) {
-            println("Event ID: ${event.id}, Name: ${event.gameName}, Location: ${event.location}," +
-                    " Date: ${event.date}, Time: ${event.time}, Description: ${event.description}")
-        }
-    }
 }

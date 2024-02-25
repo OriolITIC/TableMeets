@@ -1,5 +1,6 @@
 package com.example.tablemeets
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -53,9 +54,9 @@ class NewEvent : AppCompatActivity() {
             if (name.isNotEmpty() && gameName.isNotEmpty() && location.isNotEmpty() &&
                 time.isNotEmpty() && date.isNotEmpty() && description.isNotEmpty()) {
 
-                // Insertar el evento en la base de datos
                 val dbHelper = AppDatabaseHelper(this)
-                dbHelper.addCreatedEvent(name, gameName, location, date, time, description)
+                val userId = getAuthenticatedUserId() // Obtener el ID del usuario autenticado
+                dbHelper.createEvent(this, userId, name, gameName, location, date, time, description)
 
                 // Notificar al usuario que el evento se creó exitosamente
                 Toast.makeText(this, "Evento creado exitosamente", Toast.LENGTH_SHORT).show()
@@ -74,6 +75,10 @@ class NewEvent : AppCompatActivity() {
             }
         }
 
+    }
 
+    private fun getAuthenticatedUserId(): Long {
+        val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        return sharedPreferences.getLong("userId", -1)
     }
 }

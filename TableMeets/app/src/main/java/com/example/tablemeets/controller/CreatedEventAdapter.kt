@@ -9,22 +9,22 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tablemeets.DescriptionCreatedEvent
 import com.example.tablemeets.R
-import com.example.tablemeets.data.CreatedEvent
+import com.example.tablemeets.data.Event
 
-class CreatedEventAdapter(private val eventList: List<CreatedEvent>) :
-    RecyclerView.Adapter<CreatedEventAdapter.CreatedEventViewHolder>() {
+class CreatedEventAdapter(private val eventList: List<Event>) :
+    RecyclerView.Adapter<CreatedEventAdapter.EventViewHolder>() {
 
-    class CreatedEventViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class EventViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textView: TextView = itemView.findViewById(R.id.textViewEvent)
         val aboutButton: Button = itemView.findViewById(R.id.about_event_button)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CreatedEventViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_event_created, parent, false)
-        return CreatedEventViewHolder(view)
+        return EventViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: CreatedEventViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: EventViewHolder, position: Int) {
         val event = eventList[position]
 
         val formattedText = "${position + 1}. ${event.eventName}"
@@ -37,8 +37,8 @@ class CreatedEventAdapter(private val eventList: List<CreatedEvent>) :
             intent.putExtra("event_name", event.eventName)
             intent.putExtra("event_game", event.gameName)
             intent.putExtra("event_location", event.location)
-            intent.putExtra("event_time", event.time)
-            intent.putExtra("event_date", event.date)
+            intent.putExtra("event_date", event.eventDate)
+            intent.putExtra("event_time", event.eventTime)
             intent.putExtra("event_description", event.description)
             context.startActivity(intent)
         }

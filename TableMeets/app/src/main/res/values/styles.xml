@@ -16,7 +16,7 @@
 
     <style name="PopupMenuStyle" parent="@style/Widget.AppCompat.PopupMenu">
         <!-- Cambiar el color de fondo del menú -->
-        <item name="android:popupBackground">@color/purple</item>
+        <item name="android:popupBackground">@color/black</item>
         <!-- Agregar más atributos de estilo según necesites -->
     </style>
 
@@ -33,8 +33,5 @@
         <item name="boxStrokeWidth">20dp</item> <!-- Ancho de borde -->
     </style>
 
-    <style name="NavigationItemText">
-        <item name="android:layout_gravity">end</item>
-    </style>
 
 </resources>
