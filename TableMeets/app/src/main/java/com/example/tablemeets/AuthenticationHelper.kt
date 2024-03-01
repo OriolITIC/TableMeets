@@ -18,13 +18,16 @@ class AuthenticationHelper(context: Context?) : SQLiteOpenHelper(context, DATABA
         private const val COLUMN_PASSWORD = "PASSWORD"
     }
 
+
     override fun onCreate(db: SQLiteDatabase) {
+
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
     }
 
     fun registerUser(context: Context, username: String, email: String, password: String, confirmPassword: String): Boolean {
+
         if (checkUserExistence(username)) {
             Toast.makeText(context, "El usuario ya está registrado", Toast.LENGTH_SHORT).show()
             return false

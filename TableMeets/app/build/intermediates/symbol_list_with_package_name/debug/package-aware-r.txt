@@ -3062,8 +3062,8 @@ id SYM
 id TOP_END
 id TOP_START
 id TimeTextInput
-id about_attending_event_button
-id about_event_button
+id about_attending_event
+id about_event
 id about_game_button
 id about_us
 id accelerate

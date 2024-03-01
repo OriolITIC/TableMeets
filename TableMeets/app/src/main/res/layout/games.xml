@@ -116,7 +116,7 @@
             android:id="@+id/recyclerViewGames"
             android:layout_width="323dp"
             android:layout_height="415dp"
-            android:layout_marginTop="22dp"
+            android:layout_marginTop="30dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"

@@ -22,12 +22,12 @@
             android:fontFamily="@font/montserrat_medium"
             android:gravity="center_vertical"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/about_attending_event_button"
+            app:layout_constraintEnd_toStartOf="@id/about_attending_event"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/about_attending_event_button"
+        <ImageView
+            android:id="@+id/about_attending_event"
             android:layout_width="64dp"
             android:layout_height="71dp"
             android:background="@drawable/add_sign"

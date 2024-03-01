@@ -3061,8 +3061,8 @@ int id SYM 0x7f090016
 int id TOP_END 0x7f090017
 int id TOP_START 0x7f090018
 int id TimeTextInput 0x7f090019
-int id about_attending_event_button 0x7f09001a
-int id about_event_button 0x7f09001b
+int id about_attending_event 0x7f090261
+int id about_event 0x7f090262
 int id about_game_button 0x7f09001c
 int id about_us 0x7f09001d
 int id accelerate 0x7f09001e

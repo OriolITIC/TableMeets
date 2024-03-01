@@ -1,6 +1,7 @@
 package com.example.tablemeets
 
 import android.content.Intent
+import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -12,14 +13,20 @@ import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
 
 class Login : AppCompatActivity() {
+
+    private lateinit var appDatabaseHelper: AppDatabaseHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
         val navigationHelper = NavigationHelper(this)
-        val appDatabaseHelper = AppDatabaseHelper(this)
+
         val authenticationHelper = AuthenticationHelper(this)
 
+        appDatabaseHelper = AppDatabaseHelper(this)
+
+        appDatabaseHelper.onCreate(appDatabaseHelper.writableDatabase)
 
         val goToAboutUs = findViewById<View>(R.id.about_us)
         val userNameInputLayout = findViewById<TextInputLayout>(R.id.username_input_text)

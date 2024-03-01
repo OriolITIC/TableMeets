@@ -29,7 +29,7 @@ class AppDatabaseHelper(context: Context?) : SQLiteOpenHelper(context, DATABASE_
             "EVENT_ID INTEGER PRIMARY KEY AUTOINCREMENT," +
             "USER_ID INTEGER," +
             "EVENT_NAME TEXT," +
-            "GAME_ID INTEGER," +
+            "GAME_NAME INTEGER," +
             "LOCATION TEXT," +
             "EVENT_DATE TEXT," +
             "EVENT_TIME TEXT," +
@@ -51,14 +51,14 @@ class AppDatabaseHelper(context: Context?) : SQLiteOpenHelper(context, DATABASE_
             "FOREIGN KEY(GAME_ID) REFERENCES Events(GAME_ID))"
 
     override fun onCreate(database: SQLiteDatabase?) {
-        Log.d("AppDatabaseHelper", "onCreate() called") // Agrega un log para verificar que onCreate() se está llamando correctamente
+        Log.d("AppDatabaseHelper", "onCreate() called")
 
         database?.execSQL(tableUsers)
         database?.execSQL(tableEvents)
         database?.execSQL(tableGames)
         database?.execSQL(tableUserEvents)
 
-        Log.d("AppDatabaseHelper", "Tables created successfully") // Agrega un log para verificar que las tablas se crean correctamente
+        Log.d("AppDatabaseHelper", "Tables created successfully")
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {}
@@ -66,11 +66,10 @@ class AppDatabaseHelper(context: Context?) : SQLiteOpenHelper(context, DATABASE_
     fun createEvent(context: Context, userId: Long, eventName: String, gameName: String, location: String, eventDate: String,
                     eventTime: String, description: String): Long {
         val db = writableDatabase
-        var eventId: Long = -1 // Inicializamos el ID del evento
+        var eventId: Long = -1
 
         db.beginTransaction()
         try {
-            // Insertar el evento en la tabla Events
             val values = ContentValues().apply {
                 put("USER_ID", userId)
                 put("EVENT_NAME", eventName)
@@ -82,7 +81,6 @@ class AppDatabaseHelper(context: Context?) : SQLiteOpenHelper(context, DATABASE_
             }
             eventId = db.insert("Events", null, values)
 
-            // Insertar la relación entre el usuario y el evento en la tabla UserEvent
             if (eventId != -1L) {
                 val userEventValues = ContentValues().apply {
                     put("USER_ID", userId)
@@ -98,9 +96,7 @@ class AppDatabaseHelper(context: Context?) : SQLiteOpenHelper(context, DATABASE_
             db.endTransaction()
         }
 
-        // Verificar si el evento se ha insertado correctamente en ambas tablas
         if (eventId != -1L) {
-            // Construir el mensaje con los parámetros del evento
             val message = "Evento creado:\n" +
                     "Nombre: $eventName\n" +
                     "Juego: $gameName\n" +
@@ -109,10 +105,8 @@ class AppDatabaseHelper(context: Context?) : SQLiteOpenHelper(context, DATABASE_
                     "Hora: $eventTime\n" +
                     "Descripción: $description"
 
-            // Mostrar un Toast con el mensaje
             Toast.makeText(context, message, Toast.LENGTH_LONG).show()
         } else {
-            // Mostrar un Toast si hubo un problema al crear el evento
             Toast.makeText(context, "Hubo un problema al crear el evento", Toast.LENGTH_SHORT).show()
         }
 

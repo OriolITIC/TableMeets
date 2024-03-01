@@ -50,8 +50,8 @@ id LinearLayoutHeader
 id LocationTextInput
 id NameTextInput
 id TimeTextInput
-id about_attending_event_button
-id about_event_button
+id about_attending_event
+id about_event
 id about_game_button
 id about_us
 id attending_events

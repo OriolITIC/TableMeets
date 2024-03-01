@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tablemeets.DescriptionAttendingEvent
@@ -17,7 +18,7 @@ class AttendingEventAdapter(private val eventList: List<Event>) :
 
     class EventViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textView: TextView = itemView.findViewById(R.id.textViewAttendingEvent)
-        val aboutButton: Button = itemView.findViewById(R.id.about_attending_event_button)
+        val aboutButton: ImageView = itemView.findViewById(R.id.about_attending_event)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventViewHolder {
@@ -31,7 +32,7 @@ class AttendingEventAdapter(private val eventList: List<Event>) :
         val formattedText = "${position + 1}. ${event.eventName}"
         holder.textView.text = formattedText
 
-        holder.aboutButton.text = "Asistente"
+        //holder.aboutButton.text = "Asistente"
         holder.aboutButton.setOnClickListener {
             val context = holder.itemView.context
             val intent = Intent(context, DescriptionAttendingEvent::class.java)
