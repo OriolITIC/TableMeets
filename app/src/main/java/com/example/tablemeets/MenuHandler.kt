@@ -95,8 +95,6 @@ class MenuHandler(private val context: Context) : NavigationView.OnNavigationIte
     }
 
 
-    // this method is not necessary if we use (setNavigationItemSelectedListener)
-    // method to display options ---> but there are some complications...
     fun showPopupMenu(view: View, navigationHelper: NavigationHelper) {
         val popupMenu = PopupMenu(context, view)
         val authenticationHelper = AuthenticationHelper(context)
