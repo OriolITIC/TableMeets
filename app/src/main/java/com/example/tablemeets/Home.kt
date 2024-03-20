@@ -35,10 +35,10 @@ class Home : AppCompatActivity() {
 
         if (!username.isNullOrEmpty()) {
 
-            helloUser.text = "¡Bienvenido $username!"
+            helloUser.text = "¡Bienvenid@ $username!"
         } else {
 
-            helloUser.text = "¡Bienvenido!"
+            helloUser.text = "¡Bienvenid@!"
         }
 
         menuIcon.setOnClickListener {
