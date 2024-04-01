@@ -28,10 +28,10 @@ com.example.tablemeets.app-appcompat-1.6.1-26 C:\Users\oriol\.gradle\caches\tran
 com.example.tablemeets.app-core-1.5.0-27 C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\res
 com.example.tablemeets.app-lifecycle-viewmodel-2.5.1-28 C:\Users\oriol\.gradle\caches\transforms-3\ef65799e2fec5373409f9725bd7a643c\transformed\lifecycle-viewmodel-2.5.1\res
 com.example.tablemeets.app-viewpager2-1.0.0-29 C:\Users\oriol\.gradle\caches\transforms-3\f27cc9987ff57f135654f4a6a31b5537\transformed\viewpager2-1.0.0\res
-com.example.tablemeets.app-pngs-30 C:\Users\oriol\Desktop\H\TableMeets\app\build\generated\res\pngs\debug
-com.example.tablemeets.app-resValues-31 C:\Users\oriol\Desktop\H\TableMeets\app\build\generated\res\resValues\debug
-com.example.tablemeets.app-packageDebugResources-32 C:\Users\oriol\Desktop\H\TableMeets\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.tablemeets.app-packageDebugResources-33 C:\Users\oriol\Desktop\H\TableMeets\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.tablemeets.app-merged_res-34 C:\Users\oriol\Desktop\H\TableMeets\app\build\intermediates\merged_res\debug
-com.example.tablemeets.app-debug-35 C:\Users\oriol\Desktop\H\TableMeets\app\src\debug\res
-com.example.tablemeets.app-main-36 C:\Users\oriol\Desktop\H\TableMeets\app\src\main\res
+com.example.tablemeets.app-pngs-30 C:\Users\oriol\Desktop\TableMeets\app\build\generated\res\pngs\debug
+com.example.tablemeets.app-resValues-31 C:\Users\oriol\Desktop\TableMeets\app\build\generated\res\resValues\debug
+com.example.tablemeets.app-packageDebugResources-32 C:\Users\oriol\Desktop\TableMeets\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.tablemeets.app-packageDebugResources-33 C:\Users\oriol\Desktop\TableMeets\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.tablemeets.app-merged_res-34 C:\Users\oriol\Desktop\TableMeets\app\build\intermediates\merged_res\debug
+com.example.tablemeets.app-debug-35 C:\Users\oriol\Desktop\TableMeets\app\src\debug\res
+com.example.tablemeets.app-main-36 C:\Users\oriol\Desktop\TableMeets\app\src\main\res

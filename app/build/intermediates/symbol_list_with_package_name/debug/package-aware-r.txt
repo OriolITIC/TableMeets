@@ -1339,6 +1339,7 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color black
+color blue
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -3140,6 +3141,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id barChart
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3458,6 +3460,7 @@ id recyclerViewAttendingEvents
 id recyclerViewEvents
 id recyclerViewEventsCreated
 id recyclerViewGames
+id reportTextView
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3645,6 +3648,7 @@ id wrap_content
 id wrap_content_constrained
 id x_left
 id x_right
+id yearSpinner
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
@@ -3759,6 +3763,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout about_us
+layout activity_report
 layout attending_events
 layout custom_dialog
 layout description_attending_event

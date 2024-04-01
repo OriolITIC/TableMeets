@@ -1,5 +1,6 @@
 package com.example.tablemeets
 
+
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
@@ -36,6 +37,12 @@ class Login : AppCompatActivity() {
         val goToForgotPassword = findViewById<TextView>(R.id.forgot_password)
         val goToHome = findViewById<View>(R.id.menu_logo)
 
+        val reportTextView = findViewById<TextView>(R.id.reportTextView)
+        reportTextView.setOnClickListener {
+            val intent = Intent(this, Report::class.java)
+            startActivity(intent)
+        }
+
         goToHome.setOnClickListener{
             navigationHelper.goToHome()
         }
@@ -68,5 +75,13 @@ class Login : AppCompatActivity() {
                 Toast.makeText(this, "Inicio de sesión fallido. Verifica tu nombre de usuario y contraseña.", Toast.LENGTH_SHORT).show()
             }
         }
+
+
+
+
+
+
+
+
     }
 }

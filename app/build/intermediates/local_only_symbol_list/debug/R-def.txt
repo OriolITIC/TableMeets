@@ -3,6 +3,7 @@ local
 color DarkIndigo
 color Indigo
 color black
+color blue
 color lightIndigo
 color purple
 color white
@@ -55,6 +56,7 @@ id about_event
 id about_game
 id about_us
 id attending_events
+id barChart
 id blocked_users_MaterialSwitch
 id blocked_users_TextView
 id button3
@@ -118,6 +120,7 @@ id recyclerViewAttendingEvents
 id recyclerViewEvents
 id recyclerViewEventsCreated
 id recyclerViewGames
+id reportTextView
 id save_button
 id search_event
 id search_game_icon
@@ -154,7 +157,9 @@ id type_of_event_imageView
 id username_input_text
 id vibration_MaterialSwitch
 id vibration_TextView
+id yearSpinner
 layout about_us
+layout activity_report
 layout attending_events
 layout description_attending_event
 layout description_created_event
