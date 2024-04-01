@@ -12,12 +12,12 @@
         "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\drawable\\menu_logo.png"
     },
     {
-        "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\drawable-xxhdpi_ic_home.png.flat",
-        "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\drawable-xxhdpi\\ic_home.png"
-    },
-    {
         "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\drawable-xxhdpi_ic_home.png.flat",
+        "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\drawable-xxhdpi\\ic_home.png"
     },
     {
         "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\layout_forgot_password.xml.flat",
@@ -84,10 +84,6 @@
         "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.tablemeets.app-merged_res-34:/layout_activity_report.xml.flat",
-        "source": "com.example.tablemeets.app-main-36:/layout/activity_report.xml"
-    },
-    {
         "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\drawable_home_logo.png.flat",
         "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\drawable\\home_logo.png"
     },
@@ -130,6 +126,10 @@
     {
         "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\layout_description_created_event.xml.flat",
         "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\layout\\description_created_event.xml"
+    },
+    {
+        "merged": "com.example.tablemeets.app-merged_res-34:/layout_login.xml.flat",
+        "source": "com.example.tablemeets.app-main-36:/layout/login.xml"
     },
     {
         "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\drawable-xhdpi_ic_home.png.flat",
