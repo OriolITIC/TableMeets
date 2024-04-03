@@ -3,7 +3,8 @@
     <color name="DarkIndigo">#565658</color>
     <color name="Indigo">#B4B4C2</color>
     <color name="black">#FF000000</color>
-    <color name="blue">#0000FF</color>
+    <color name="blue">#080FB1</color>
+    <color name="darkGreen">#0E5E07</color>
     <color name="lightIndigo">#E9E9E9</color>
     <color name="purple">#741A74</color>
     <color name="white">#FFFFFFFF</color>

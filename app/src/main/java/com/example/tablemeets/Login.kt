@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
@@ -37,7 +38,7 @@ class Login : AppCompatActivity() {
         val goToForgotPassword = findViewById<TextView>(R.id.forgot_password)
         val goToHome = findViewById<View>(R.id.menu_logo)
 
-        val reportTextView = findViewById<TextView>(R.id.reportTextView)
+        val reportTextView = findViewById<ImageView>(R.id.reportImageView)
         reportTextView.setOnClickListener {
             val intent = Intent(this, Report::class.java)
             startActivity(intent)
