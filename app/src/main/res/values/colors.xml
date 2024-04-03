@@ -6,4 +6,5 @@
     <color name="DarkIndigo">#565658</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="blue">#0000FF</color>
 </resources>

@@ -104,6 +104,11 @@
             android:exported="true">
         </activity>
 
+        <activity
+            android:name=".Report"
+            android:exported="true">
+        </activity>
+
     </application>
 
 </manifest>
