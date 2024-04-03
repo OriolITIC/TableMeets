@@ -24,6 +24,10 @@
         "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\layout\\forgot_password.xml"
     },
     {
+        "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\drawable_report_logo.png.flat",
+        "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\drawable\\report_logo.png"
+    },
+    {
         "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\mipmap-mdpi\\ic_launcher.webp"
     },
@@ -34,6 +38,10 @@
     {
         "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\layout_about_us.xml.flat",
         "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\layout\\about_us.xml"
+    },
+    {
+        "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\drawable_mainlogo.xml.flat",
+        "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\drawable\\mainlogo.xml"
     },
     {
         "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\drawable_footer_background.xml.flat",
@@ -54,6 +62,10 @@
     {
         "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\layout_new_event.xml.flat",
         "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\layout\\new_event.xml"
+    },
+    {
+        "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\drawable__ear6ndi3hqqmevrb6becsejah0.xml.flat",
+        "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\drawable\\_ear6ndi3hqqmevrb6becsejah0.xml"
     },
     {
         "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
@@ -128,10 +140,6 @@
         "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\layout\\description_created_event.xml"
     },
     {
-        "merged": "com.example.tablemeets.app-merged_res-34:/layout_login.xml.flat",
-        "source": "com.example.tablemeets.app-main-36:/layout/login.xml"
-    },
-    {
         "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\drawable-xhdpi_ic_home.png.flat",
         "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\drawable-xhdpi\\ic_home.png"
     },
@@ -166,6 +174,10 @@
     {
         "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\layout_activity_report_action.xml.flat",
+        "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\layout\\activity_report_action.xml"
     },
     {
         "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\drawable_about_us.png.flat",
@@ -270,10 +282,6 @@
     {
         "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\drawable-mdpi_ic_home.png.flat",
         "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\drawable-mdpi\\ic_home.png"
-    },
-    {
-        "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\layout_charts_layout.xml.flat",
-        "source": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-main-36:\\layout\\charts_layout.xml"
     },
     {
         "merged": "C:\\Users\\oriol\\.gradle\\daemon\\8.0\\com.example.tablemeets.app-merged_res-34:\\layout_item_event_created.xml.flat",

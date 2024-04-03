@@ -4,6 +4,7 @@ color DarkIndigo
 color Indigo
 color black
 color blue
+color darkGreen
 color lightIndigo
 color purple
 color white
@@ -23,10 +24,12 @@ drawable ic_launcher_background
 drawable left_arrow
 drawable logo_black
 drawable main_logo
+drawable mainlogo
 drawable menu_logo
 drawable my_image
 drawable new_event
 drawable profile_logo
+drawable report_logo
 drawable search_button
 drawable search_logo
 drawable settings_logo
@@ -59,6 +62,7 @@ id attending_events
 id barChart
 id blocked_users_MaterialSwitch
 id blocked_users_TextView
+id btnCreatePdf
 id button3
 id button_attending_events
 id button_create_event
@@ -120,7 +124,7 @@ id recyclerViewAttendingEvents
 id recyclerViewEvents
 id recyclerViewEventsCreated
 id recyclerViewGames
-id reportTextView
+id reportImageView
 id save_button
 id search_event
 id search_game_icon

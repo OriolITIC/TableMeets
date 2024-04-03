@@ -1352,6 +1352,7 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color darkGreen
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -2958,6 +2959,7 @@ drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
 drawable main_logo
+drawable mainlogo
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -3022,6 +3024,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable profile_logo
+drawable report_logo
 drawable search_button
 drawable search_logo
 drawable settings_logo
@@ -3155,6 +3158,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnCreatePdf
 id button3
 id buttonPanel
 id button_attending_events
@@ -3460,7 +3464,7 @@ id recyclerViewAttendingEvents
 id recyclerViewEvents
 id recyclerViewEventsCreated
 id recyclerViewGames
-id reportTextView
+id reportImageView
 id reverseSawtooth
 id right
 id rightToLeft
