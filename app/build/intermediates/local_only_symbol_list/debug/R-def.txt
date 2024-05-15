@@ -19,7 +19,6 @@ drawable footer_background
 drawable games_logo
 drawable header_background
 drawable home_logo
-drawable ic_home
 drawable ic_launcher_background
 drawable left_arrow
 drawable logo_black

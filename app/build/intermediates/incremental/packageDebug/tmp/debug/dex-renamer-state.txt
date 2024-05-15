@@ -1,9 +1,9 @@
-#Wed Apr 03 16:59:53 CEST 2024
-base.0=C\:\\Users\\oriol\\Desktop\\TableMeets\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\oriol\\Desktop\\TableMeets\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Users\\oriol\\Desktop\\TableMeets\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
-base.3=C\:\\Users\\oriol\\Desktop\\TableMeets\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
-base.4=C\:\\Users\\oriol\\Desktop\\TableMeets\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+#Wed May 15 19:00:32 CEST 2024
+base.0=C\:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
+base.3=C\:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
+base.4=C\:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=11/classes.dex

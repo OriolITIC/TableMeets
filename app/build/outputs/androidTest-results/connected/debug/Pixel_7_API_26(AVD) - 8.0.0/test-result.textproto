@@ -1,0 +1,281 @@
+# 2024-05-15T17:02:32.503Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 5
+}
+test_status: FAILED
+test_result {
+  test_case {
+    test_class: "AuthenticationHelperTest"
+    test_package: "com.example.tablemeets"
+    test_method: "testIsValidEmail"
+    start_time {
+      seconds: 1715792549
+      nanos: 706000000
+    }
+    end_time {
+      seconds: 1715792549
+      nanos: 741000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\logcat-com.example.tablemeets.AuthenticationHelperTest-testIsValidEmail.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "AuthenticationHelperTest"
+    test_package: "com.example.tablemeets"
+    test_method: "testLoginUser"
+    start_time {
+      seconds: 1715792549
+      nanos: 761000000
+    }
+    end_time {
+      seconds: 1715792549
+      nanos: 844000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\logcat-com.example.tablemeets.AuthenticationHelperTest-testLoginUser.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "AuthenticationHelperTest"
+    test_package: "com.example.tablemeets"
+    test_method: "testRegisterUser"
+    start_time {
+      seconds: 1715792549
+      nanos: 847000000
+    }
+    end_time {
+      seconds: 1715792549
+      nanos: 879000000
+    }
+  }
+  test_status: FAILED
+  error {
+    error_message: "java.lang.AssertionError\nat org.junit.Assert.fail(Assert.java:87)\nat org.junit.Assert.assertTrue(Assert.java:42)\nat org.junit.Assert.assertTrue(Assert.java:53)\nat com.example.tablemeets.AuthenticationHelperTest.testRegisterUser(AuthenticationHelperTest.kt:26)"
+    error_type: "java.lang.AssertionError\nat org.junit.Assert.fail(Assert.java"
+    stack_trace: "java.lang.AssertionError\nat org.junit.Assert.fail(Assert.java:87)\nat org.junit.Assert.assertTrue(Assert.java:42)\nat org.junit.Assert.assertTrue(Assert.java:53)\nat com.example.tablemeets.AuthenticationHelperTest.testRegisterUser(AuthenticationHelperTest.kt:26)"
+  }
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\logcat-com.example.tablemeets.AuthenticationHelperTest-testRegisterUser.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "AuthenticationHelperTest"
+    test_package: "com.example.tablemeets"
+    test_method: "testCheckUserExistence"
+    start_time {
+      seconds: 1715792549
+      nanos: 882000000
+    }
+    end_time {
+      seconds: 1715792549
+      nanos: 937000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\logcat-com.example.tablemeets.AuthenticationHelperTest-testCheckUserExistence.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "AuthenticationHelperTest"
+    test_package: "com.example.tablemeets"
+    test_method: "testVerifyPassword"
+    start_time {
+      seconds: 1715792549
+      nanos: 941000000
+    }
+    end_time {
+      seconds: 1715792549
+      nanos: 947000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\logcat-com.example.tablemeets.AuthenticationHelperTest-testVerifyPassword.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "C:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Pixel_7_API_26(AVD) - 8.0.0\\testlog\\test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}
