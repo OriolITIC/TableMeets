@@ -3,6 +3,7 @@ package com.example.tablemeets
 
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
+import android.database.sqlite.SQLiteOpenHelper
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -28,7 +29,18 @@ class Login : AppCompatActivity() {
 
         appDatabaseHelper = AppDatabaseHelper(this)
 
-        //appDatabaseHelper.onCreate(appDatabaseHelper.writableDatabase)
+        fun tableExists(databaseHelper: SQLiteOpenHelper, tableName: String): Boolean {
+            val db = databaseHelper.readableDatabase
+            val cursor = db.rawQuery("SELECT name FROM sqlite_master WHERE type='table' AND name='$tableName'", null)
+            val exists = cursor.count > 0
+            cursor.close()
+            return exists
+        }
+
+        if (!tableExists(appDatabaseHelper, "Users")) {
+            appDatabaseHelper.onCreate(appDatabaseHelper.writableDatabase)
+        }
+
 
         val goToAboutUs = findViewById<View>(R.id.about_us)
         val userNameInputLayout = findViewById<TextInputLayout>(R.id.username_input_text)
@@ -64,25 +76,13 @@ class Login : AppCompatActivity() {
             val userName = userNameInputLayout.editText?.text.toString()
             val password = passwordInputLayout.editText?.text.toString()
 
-            // Intenta iniciar sesión
             val isLoginSuccessful = authenticationHelper.loginUser(this, userName, password)
 
-            // Verifica si el inicio de sesión fue exitoso
             if (isLoginSuccessful) {
-                // Navega a la pantalla de inicio solo si el inicio de sesión es exitoso
                 navigationHelper.goToHome()
             } else {
-                // Muestra un mensaje de error en caso de que el inicio de sesión falle
                 Toast.makeText(this, "Inicio de sesión fallido. Verifica tu nombre de usuario y contraseña.", Toast.LENGTH_SHORT).show()
             }
         }
-
-
-
-
-
-
-
-
     }
 }

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="DarkIndigo">#565658</color>
+    <color name="Indigo">#B4B4C2</color>
+    <color name="black">#FF000000</color>
+    <color name="blue">#080FB1</color>
+    <color name="darkGreen">#0E5E07</color>
+    <color name="lightIndigo">#E9E9E9</color>
+    <color name="purple">#741A74</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">TableMeets</string>
+    <string name="confirmPassword">Confirmar contraseña</string>
+    <string name="email">Email</string>
+    <string name="event_info">
+            <![CDATA[<b>Juego:</b> %1$s <br/><br/>
+            <b>Ubicación:</b> %2$s <br/><br/>
+            <b>Fecha:</b> %3$s <br/><br/>
+            <b>Hora:</b> %4$s <br/><br/>
+            <b>Descripción:</b><br/><br/> %5$s]]>
+    </string>
+    <string name="game">Juego</string>
+    <string name="join_our_community_description_part1">¡Únete a nuestra creciente comunidad de jugadores de mesa!</string>
+    <string name="join_our_community_description_part2">Explora, participa en eventos emocionantes y conecta con personas apasionadas como tú.</string>
+    <string name="join_our_community_title">Únete a la Comunidad\n</string>
+    <string name="location">Lugar</string>
+    <string name="mas">Más</string>
+    <string name="name">Nombre</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="new_email">Nuevo email</string>
+    <string name="new_password">Nueva contraseña</string>
+    <string name="our_mission_description_part1">TableMeets nace de la idea de reunir a jugadores apasionados de los juegos de mesa en una plataforma dedicada a la organización de eventos y la conexión entre entusiastas.</string>
+    <string name="password">Password</string>
+    <string name="userOrEmail">Usuario o Email</string>
+    <string name="username">Usuario</string>
+    <string name="what_we_offer">¿Qué Ofrecemos?</string>
+    <string name="what_we_offer_description_part1">En TableMeets, ofrecemos una plataforma social diseñada específicamente para:</string>
+    <string name="what_we_offer_description_part2">- Organizar eventos: Encuentra eventos cercanos o crea los tuyos propios para disfrutar junto a otros jugadores.</string>
+    <string name="what_we_offer_description_part3">- Conectar con jugadores: Encuentra personas afines con tus intereses en juegos y haz nuevos amigos.</string>
+    <string name="what_we_offer_description_part4">- Experiencias únicas: Disfruta de juegos de mesa en un ambiente amigable y lleno de diversión.</string>
+    <style name="Base.Theme.TableMeets" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="PopupMenuStyle" parent="@style/Widget.AppCompat.PopupMenu">
+        
+        <item name="android:popupBackground">@color/black</item>
+        
+    </style>
+    <style name="PopupMenuTextAppearance" parent="@style/TextAppearance.AppCompat.Menu">
+        
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/white</item>
+        
+    </style>
+    <style name="ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item> 
+    </style>
+    <style name="TextInputLayoutStyle">
+        
+
+        <item name="boxStrokeWidth">20dp</item> 
+    </style>
+    <style name="Theme.TableMeets" parent="Base.Theme.TableMeets"/>
+    <style name="txt_title" parent="TextAppearance.AppCompat">
+
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:textAlignment">center</item>
+
+    </style>
+</resources>

@@ -17,7 +17,11 @@ class AppDatabaseHelper(context: Context?) : SQLiteOpenHelper(context, DATABASE_
         const val DATABASE_VERSION = 2
     }
 
-    private val authenticationHelper: AuthenticationHelper = AuthenticationHelper(context)
+    private val authenticationHelper: AuthenticationHelper
+
+    init {
+        authenticationHelper = AuthenticationHelper(context)
+    }
 
     val tableUsers = "CREATE TABLE Users (" +
             "USER_ID INTEGER PRIMARY KEY AUTOINCREMENT," +

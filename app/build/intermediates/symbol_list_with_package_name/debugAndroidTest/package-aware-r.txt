@@ -1,0 +1,3 @@
+com.example.tablemeets.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

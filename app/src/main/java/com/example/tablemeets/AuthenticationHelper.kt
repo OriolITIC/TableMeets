@@ -4,11 +4,12 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-//import android.util.Log
+import android.util.Log
 import android.widget.Toast
 import org.w3c.dom.Text
 
-class AuthenticationHelper(context: Context?) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
+class AuthenticationHelper(context: Context?) :
+    SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
     companion object {
         private const val DATABASE_VERSION = 2
@@ -21,28 +22,34 @@ class AuthenticationHelper(context: Context?) : SQLiteOpenHelper(context, DATABA
 
 
     override fun onCreate(db: SQLiteDatabase) {
-/*        val CREATE_USERS_TABLE = ("CREATE TABLE IF NOT EXISTS $TABLE_USERS ("
+        val CREATE_USERS_TABLE = ("CREATE TABLE IF NOT EXISTS $TABLE_USERS ("
                 + "$COLUMN_USERNAME TEXT PRIMARY KEY,"
                 + "$COLUMN_EMAIL TEXT,"
                 + "$COLUMN_PASSWORD TEXT"
                 + ")")
-        db.execSQL(CREATE_USERS_TABLE)*/
+        db.execSQL(CREATE_USERS_TABLE)
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
     }
 
-    fun registerUser(context: Context, username: String, email: String, password: String, confirmPassword: String): Boolean {
+    fun registerUser(
+        context: Context,
+        username: String,
+        email: String,
+        password: String,
+        confirmPassword: String
+    ): Boolean {
 
         if (checkUserExistence(username)) {
-            Toast.makeText(context, "El usuario ya está registrado", Toast.LENGTH_SHORT).show()
-            //Log.d("User Existence", "El usuario ya está registrado")
+            //Toast.makeText(context, "El usuario ya está registrado", Toast.LENGTH_SHORT).show()
+            Log.d("User Existence", "El usuario ya está registrado")
             return false
         }
 
         if (!isValidEmail(email)) {
-            Toast.makeText(context, "El correo electrónico no es válido", Toast.LENGTH_SHORT).show()
-            //Log.d("User Existence", "El correo electrónico no es válido")
+            //Toast.makeText(context, "El correo electrónico no es válido", Toast.LENGTH_SHORT).show()
+            Log.d("User Existence", "El correo electrónico no es válido")
             return false
         }
 
@@ -51,8 +58,12 @@ class AuthenticationHelper(context: Context?) : SQLiteOpenHelper(context, DATABA
         }
 
         if (password != confirmPassword) {
-            Toast.makeText(context, "La contraseña y la confirmación de la contraseña no coinciden", Toast.LENGTH_SHORT).show()
-            //Log.d("User Existence", "La contraseña y la confirmación de la contraseña no coinciden")
+            /*Toast.makeText(
+                context,
+                "La contraseña y la confirmación de la contraseña no coinciden",
+                Toast.LENGTH_SHORT
+            ).show()*/
+            Log.d("User Existence", "La contraseña y la confirmación de la contraseña no coinciden")
             return false
         }
 
@@ -78,7 +89,7 @@ class AuthenticationHelper(context: Context?) : SQLiteOpenHelper(context, DATABA
         val result = cursor.count > 0
 
         if (result) {
-            Toast.makeText(context, "¡Inicio de sesión exitoso!", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(context, "¡Inicio de sesión exitoso!", Toast.LENGTH_SHORT).show()
 
             cursor.moveToFirst()
             val userId = cursor.getLong(0)
@@ -90,7 +101,11 @@ class AuthenticationHelper(context: Context?) : SQLiteOpenHelper(context, DATABA
                 apply()
             }
         } else {
-            Toast.makeText(context, "Nombre de usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show()
+            /*Toast.makeText(
+                context,
+                "Nombre de usuario o contraseña incorrectos",
+                Toast.LENGTH_SHORT
+            ).show()*/
         }
 
         return result
@@ -126,28 +141,48 @@ class AuthenticationHelper(context: Context?) : SQLiteOpenHelper(context, DATABA
 
 
         if (!hasDigit) {
-            Toast.makeText(context, "La contraseña debe contener al menos un dígito", Toast.LENGTH_SHORT).show()
-            //Log.d("AuthenticationHelper", "La contraseña debe contener al menos un dígito")
+            /*Toast.makeText(
+                context,
+                "La contraseña debe contener al menos un dígito",
+                Toast.LENGTH_SHORT
+            ).show()*/
+            Log.d("AuthenticationHelper", "La contraseña debe contener al menos un dígito")
         }
 
         if (!hasLowercase) {
-            Toast.makeText(context, "La contraseña debe contener al menos una letra minúscula", Toast.LENGTH_SHORT).show()
-            //Log.d("AuthenticationHelper", "La contraseña debe contener al menos una letra minúscula")
+            /*Toast.makeText(
+                context,
+                "La contraseña debe contener al menos una letra minúscula",
+                Toast.LENGTH_SHORT
+            ).show()*/
+            Log.d("AuthenticationHelper", "La contraseña debe contener al menos una letra minúscula")
         }
 
         if (!hasUppercase) {
-            Toast.makeText(context, "La contraseña debe contener al menos una letra mayúscula", Toast.LENGTH_SHORT).show()
-            //Log.d("AuthenticationHelper", "La contraseña debe contener al menos una letra mayúscula")
+            /*Toast.makeText(
+                context,
+                "La contraseña debe contener al menos una letra mayúscula",
+                Toast.LENGTH_SHORT
+            ).show()*/
+            Log.d("AuthenticationHelper", "La contraseña debe contener al menos una letra mayúscula")
         }
 
         if (!hasSpecialChar) {
-            Toast.makeText(context, "La contraseña debe contener al menos un carácter especial (?=.*[@\$!%*.?&)", Toast.LENGTH_SHORT).show()
-            //Log.d("AuthenticationHelper", "La contraseña debe contener al menos un carácter especial (?=.*[@\$!%*.?&)")
+            /*Toast.makeText(
+                context,
+                "La contraseña debe contener al menos un carácter especial (?=.*[@\$!%*.?&)",
+                Toast.LENGTH_SHORT
+            ).show()*/
+            Log.d("AuthenticationHelper", "La contraseña debe contener al menos un carácter especial (?=.*[@\$!%*.?&)")
         }
 
         if (!containsAtLeastSixNumbers) {
-            Toast.makeText(context, "La contraseña debe tener al menos 6 números", Toast.LENGTH_SHORT).show()
-            //Log.d("AuthenticationHelper", "La contraseña debe tener al menos 6 números")
+            /*Toast.makeText(
+                context,
+                "La contraseña debe tener al menos 6 números",
+                Toast.LENGTH_SHORT
+            ).show()*/
+            Log.d("AuthenticationHelper", "La contraseña debe tener al menos 6 números")
         }
 
         return regex.matches(password)
@@ -184,7 +219,7 @@ class AuthenticationHelper(context: Context?) : SQLiteOpenHelper(context, DATABA
         val sharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         with(sharedPreferences.edit()) {
             remove("userId")
-            Toast.makeText(context,"Removing userId",Toast.LENGTH_SHORT)
+            //Toast.makeText(context, "Removing userId", Toast.LENGTH_SHORT)
             apply()
         }
     }
