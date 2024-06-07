@@ -1,0 +1,266 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.tablemeets"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="33" />
+10
+11    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+11-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:5:5-80
+11-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:5:22-78
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:6:5-79
+12-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:6:22-77
+13
+14    <permission
+14-->[androidx.core:core:1.9.0] C:\Users\oriol\.gradle\caches\transforms-3\43edc55df3b5c22b93aea8041b6b233a\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+15        android:name="com.example.tablemeets.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.9.0] C:\Users\oriol\.gradle\caches\transforms-3\43edc55df3b5c22b93aea8041b6b233a\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.9.0] C:\Users\oriol\.gradle\caches\transforms-3\43edc55df3b5c22b93aea8041b6b233a\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="com.example.tablemeets.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.9.0] C:\Users\oriol\.gradle\caches\transforms-3\43edc55df3b5c22b93aea8041b6b233a\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.9.0] C:\Users\oriol\.gradle\caches\transforms-3\43edc55df3b5c22b93aea8041b6b233a\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+19    <uses-permission android:name="android.permission.REORDER_TASKS" />
+19-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:24:5-72
+19-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:24:22-69
+20
+21    <application
+21-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:8:5-109:19
+22        android:allowBackup="true"
+22-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:9:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.9.0] C:\Users\oriol\.gradle\caches\transforms-3\43edc55df3b5c22b93aea8041b6b233a\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+24        android:dataExtractionRules="@xml/data_extraction_rules"
+24-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:10:9-65
+25        android:extractNativeLibs="false"
+26        android:fullBackupContent="@xml/backup_rules"
+26-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:11:9-54
+27        android:icon="@mipmap/ic_launcher_round"
+27-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:12:9-49
+28        android:label="@string/app_name"
+28-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:13:9-41
+29        android:roundIcon="@mipmap/ic_launcher_round"
+29-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:14:9-54
+30        android:supportsRtl="true"
+30-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:15:9-35
+31        android:theme="@style/Theme.TableMeets" >
+31-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:16:9-48
+32        <activity
+32-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:18:9-26:20
+33            android:name="com.example.tablemeets.Login"
+33-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:19:13-34
+34            android:exported="true" >
+34-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:20:13-36
+35            <intent-filter>
+35-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:21:13-24:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:22:17-69
+36-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:22:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:23:17-77
+38-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:23:27-74
+39            </intent-filter>
+40        </activity>
+41        <activity
+41-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:28:9-32:20
+42            android:name="com.example.tablemeets.Home"
+42-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:29:13-33
+43            android:exported="true"
+43-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:31:13-36
+44            android:label="." >
+44-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:30:13-30
+45        </activity>
+46        <activity
+46-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:34:9-37:20
+47            android:name="com.example.tablemeets.Register"
+47-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:35:13-37
+48            android:exported="true" >
+48-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:36:13-36
+49        </activity>
+50        <activity
+50-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:39:9-42:20
+51            android:name="com.example.tablemeets.ForgotPassword"
+51-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:40:13-43
+52            android:exported="true" >
+52-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:41:13-36
+53        </activity>
+54        <activity
+54-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:44:9-47:20
+55            android:name="com.example.tablemeets.NewEvent"
+55-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:45:13-37
+56            android:exported="true" >
+56-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:46:13-36
+57        </activity>
+58        <activity
+58-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:49:9-53:20
+59            android:name="com.example.tablemeets.TypeOfEvent"
+59-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:50:13-40
+60            android:exported="true" >
+60-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:51:13-36
+61        </activity>
+62        <activity
+62-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:55:9-58:20
+63            android:name="com.example.tablemeets.SearchEvent"
+63-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:56:13-40
+64            android:exported="true" >
+64-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:57:13-36
+65        </activity>
+66        <activity
+66-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:60:9-63:20
+67            android:name="com.example.tablemeets.Games"
+67-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:61:13-34
+68            android:exported="true" >
+68-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:62:13-36
+69        </activity>
+70        <activity
+70-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:65:9-68:20
+71            android:name="com.example.tablemeets.EventsCreated"
+71-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:66:13-42
+72            android:exported="true" >
+72-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:67:13-36
+73        </activity>
+74        <activity
+74-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:70:9-73:20
+75            android:name="com.example.tablemeets.AttendingEvents"
+75-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:71:13-44
+76            android:exported="true" >
+76-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:72:13-36
+77        </activity>
+78        <activity
+78-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:75:9-78:20
+79            android:name="com.example.tablemeets.Settings"
+79-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:76:13-37
+80            android:exported="true" >
+80-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:77:13-36
+81        </activity>
+82        <activity
+82-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:80:9-83:20
+83            android:name="com.example.tablemeets.Profile"
+83-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:81:13-36
+84            android:exported="true" >
+84-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:82:13-36
+85        </activity>
+86        <activity
+86-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:85:9-88:20
+87            android:name="com.example.tablemeets.EditProfile"
+87-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:86:13-40
+88            android:exported="true" >
+88-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:87:13-36
+89        </activity>
+90        <activity
+90-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:90:9-93:20
+91            android:name="com.example.tablemeets.AboutUs"
+91-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:91:13-36
+92            android:exported="true" >
+92-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:92:13-36
+93        </activity>
+94        <activity
+94-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:95:9-98:20
+95            android:name="com.example.tablemeets.DescriptionCreatedEvent"
+95-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:96:13-52
+96            android:exported="true" >
+96-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:97:13-36
+97        </activity>
+98        <activity
+98-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:99:9-102:20
+99            android:name="com.example.tablemeets.DescriptionAttendingEvent"
+99-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:100:13-54
+100            android:exported="true" >
+100-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:101:13-36
+101        </activity>
+102        <activity
+102-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:104:9-107:20
+103            android:name="com.example.tablemeets.Report"
+103-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:105:13-35
+104            android:exported="true" >
+104-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:106:13-36
+105        </activity>
+106
+107        <service
+107-->[androidx.room:room-runtime:2.6.1] C:\Users\oriol\.gradle\caches\transforms-3\21692a3ee692775d1f2bda3c904e66a5\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+108            android:name="androidx.room.MultiInstanceInvalidationService"
+108-->[androidx.room:room-runtime:2.6.1] C:\Users\oriol\.gradle\caches\transforms-3\21692a3ee692775d1f2bda3c904e66a5\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+109            android:directBootAware="true"
+109-->[androidx.room:room-runtime:2.6.1] C:\Users\oriol\.gradle\caches\transforms-3\21692a3ee692775d1f2bda3c904e66a5\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+110            android:exported="false" />
+110-->[androidx.room:room-runtime:2.6.1] C:\Users\oriol\.gradle\caches\transforms-3\21692a3ee692775d1f2bda3c904e66a5\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+111
+112        <provider
+112-->[androidx.emoji2:emoji2:1.2.0] C:\Users\oriol\.gradle\caches\transforms-3\d39a1a71cb92445ad924395f05b3b45a\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+113            android:name="androidx.startup.InitializationProvider"
+113-->[androidx.emoji2:emoji2:1.2.0] C:\Users\oriol\.gradle\caches\transforms-3\d39a1a71cb92445ad924395f05b3b45a\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+114            android:authorities="com.example.tablemeets.androidx-startup"
+114-->[androidx.emoji2:emoji2:1.2.0] C:\Users\oriol\.gradle\caches\transforms-3\d39a1a71cb92445ad924395f05b3b45a\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+115            android:exported="false" >
+115-->[androidx.emoji2:emoji2:1.2.0] C:\Users\oriol\.gradle\caches\transforms-3\d39a1a71cb92445ad924395f05b3b45a\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+116            <meta-data
+116-->[androidx.emoji2:emoji2:1.2.0] C:\Users\oriol\.gradle\caches\transforms-3\d39a1a71cb92445ad924395f05b3b45a\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+117                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+117-->[androidx.emoji2:emoji2:1.2.0] C:\Users\oriol\.gradle\caches\transforms-3\d39a1a71cb92445ad924395f05b3b45a\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+118                android:value="androidx.startup" />
+118-->[androidx.emoji2:emoji2:1.2.0] C:\Users\oriol\.gradle\caches\transforms-3\d39a1a71cb92445ad924395f05b3b45a\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+119            <meta-data
+119-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\oriol\.gradle\caches\transforms-3\33f5673a7ce4ea52b4f73052faabfed1\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+120                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+120-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\oriol\.gradle\caches\transforms-3\33f5673a7ce4ea52b4f73052faabfed1\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+121                android:value="androidx.startup" />
+121-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\oriol\.gradle\caches\transforms-3\33f5673a7ce4ea52b4f73052faabfed1\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+122        </provider>
+123
+124        <activity
+124-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:27:9-34:20
+125            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+125-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:28:13-99
+126            android:exported="true"
+126-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:29:13-36
+127            android:theme="@style/WhiteBackgroundTheme" >
+127-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:30:13-56
+128            <intent-filter android:priority="-100" >
+128-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:31:13-33:29
+128-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:31:28-51
+129                <category android:name="android.intent.category.LAUNCHER" />
+129-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:23:17-77
+129-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:23:27-74
+130            </intent-filter>
+131        </activity>
+132        <activity
+132-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:35:9-42:20
+133            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+133-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:36:13-95
+134            android:exported="true"
+134-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:37:13-36
+135            android:theme="@style/WhiteBackgroundTheme" >
+135-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:38:13-56
+136            <intent-filter android:priority="-100" >
+136-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:31:13-33:29
+136-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:31:28-51
+137                <category android:name="android.intent.category.LAUNCHER" />
+137-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:23:17-77
+137-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:23:27-74
+138            </intent-filter>
+139        </activity>
+140        <activity
+140-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:43:9-50:20
+141            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+141-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:44:13-103
+142            android:exported="true"
+142-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:45:13-36
+143            android:theme="@style/WhiteBackgroundDialogTheme" >
+143-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:46:13-62
+144            <intent-filter android:priority="-100" >
+144-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:31:13-33:29
+144-->[androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:31:28-51
+145                <category android:name="android.intent.category.LAUNCHER" />
+145-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:23:17-77
+145-->C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:23:27-74
+146            </intent-filter>
+147        </activity>
+148    </application>
+149
+150</manifest>

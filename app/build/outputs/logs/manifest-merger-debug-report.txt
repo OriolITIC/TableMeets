@@ -1,5 +1,62 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:2:1-111:12
+INJECTED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:2:1-111:12
+INJECTED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:2:1-111:12
+INJECTED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:2:1-111:12
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\oriol\.gradle\caches\transforms-3\21692a3ee692775d1f2bda3c904e66a5\transformed\room-runtime-2.6.1\AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.room:room-ktx:2.6.1] C:\Users\oriol\.gradle\caches\transforms-3\17e00a5d93eb21a5469e2309746db50b\transformed\room-ktx-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.material:material:1.9.0] C:\Users\oriol\.gradle\caches\transforms-3\9c2b9b900c4de298fb189924b5b7ed4b\transformed\material-1.9.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\oriol\.gradle\caches\transforms-3\c8da0b00cb3dee3582f03f3d60b1ce57\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\oriol\.gradle\caches\transforms-3\de7d012e4e098b38a46ce826c7deed69\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\oriol\.gradle\caches\transforms-3\ea81018398a5eb9877f0ba4a04db551f\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\oriol\.gradle\caches\transforms-3\f27cc9987ff57f135654f4a6a31b5537\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\oriol\.gradle\caches\transforms-3\a6f6bc0a5b645ddb18673e5e79911bfd\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.6.0] C:\Users\oriol\.gradle\caches\transforms-3\b5d6074acf8b8ae53822da059240fb09\transformed\activity-1.6.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\oriol\.gradle\caches\transforms-3\a88d31ff495467a17529c75ac1843c82\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\oriol\.gradle\caches\transforms-3\63d1ebdf979af4341048fdc3bbfc96fc\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\oriol\.gradle\caches\transforms-3\a612ca267cbabd2b396a9972113df7bf\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\oriol\.gradle\caches\transforms-3\ef65799e2fec5373409f9725bd7a643c\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\oriol\.gradle\caches\transforms-3\9b193a81ad056aca7c4585032d87e83e\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\oriol\.gradle\caches\transforms-3\b034c1a79e3750cb54f0def35aac43c2\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\oriol\.gradle\caches\transforms-3\d39a1a71cb92445ad924395f05b3b45a\transformed\emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\oriol\.gradle\caches\transforms-3\7d86e8ade4e087a8ad95c627e05dc7b4\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\oriol\.gradle\caches\transforms-3\36b058c516c92d03854576a80def064c\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\oriol\.gradle\caches\transforms-3\27aba3449fa4f50b0ef16e1143611207\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\oriol\.gradle\caches\transforms-3\8df0299f50225c8b688d9bd5540d109a\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\oriol\.gradle\caches\transforms-3\41d0c0014e08897cf373ecb41757dfa1\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\oriol\.gradle\caches\transforms-3\ab5613fc3c5189c0890f1a1c897cafef\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\oriol\.gradle\caches\transforms-3\89c7d98d723ba55fdac974847340c7d8\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\oriol\.gradle\caches\transforms-3\957b2f5e261d05c1309583e4919b9c62\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.9.0] C:\Users\oriol\.gradle\caches\transforms-3\43edc55df3b5c22b93aea8041b6b233a\transformed\core-1.9.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\oriol\.gradle\caches\transforms-3\556be09b17d66870a0809135cf3e6885\transformed\core-ktx-1.9.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.test.ext:junit-ktx:1.1.5] C:\Users\oriol\.gradle\caches\transforms-3\93aa5e4f85732f91ea6c0b0532bfc377\transformed\junit-ktx-1.1.5\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\oriol\.gradle\caches\transforms-3\13562495bdcfce31e6f25b46c730d5e2\transformed\MPAndroidChart-v3.1.0\AndroidManifest.xml:2:1-20:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\oriol\.gradle\caches\transforms-3\842452db315776bb2b20da7ed20404b4\transformed\savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.test.ext:junit:1.1.5] C:\Users\oriol\.gradle\caches\transforms-3\dee77c2af2fce8e5e91965373cfdf69e\transformed\junit-1.1.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:17:1-53:12
+MERGED from [androidx.test.services:storage:1.4.2] C:\Users\oriol\.gradle\caches\transforms-3\1f154d1e383a7217b5850d51cd14c446\transformed\storage-1.4.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.test:monitor:1.6.1] C:\Users\oriol\.gradle\caches\transforms-3\64704d2483aa47a34887e6a03a6c8599\transformed\monitor-1.6.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.test:annotation:1.0.1] C:\Users\oriol\.gradle\caches\transforms-3\aab6409e82542f0cc4d2b9305cf78a05\transformed\annotation-1.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\oriol\.gradle\caches\transforms-3\8ef30cd8458785a6f5c6520a3378e97c\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] C:\Users\oriol\.gradle\caches\transforms-3\b7b4bc326361448165b09c427cc1c106\transformed\sqlite-framework-2.4.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.4.0] C:\Users\oriol\.gradle\caches\transforms-3\a63da14657f61683b23fb8cd5684026a\transformed\sqlite-2.4.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\oriol\.gradle\caches\transforms-3\e0b137afff3ac49bf7934795649c619e\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\oriol\.gradle\caches\transforms-3\33f5673a7ce4ea52b4f73052faabfed1\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\oriol\.gradle\caches\transforms-3\2a7bdcf77a561098d2d62f42f6a7f367\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\oriol\.gradle\caches\transforms-3\b9f176b342dee6e081465f93e6622c68\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\oriol\.gradle\caches\transforms-3\074828eb53783e17ddeabfeaeea75130\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\oriol\.gradle\caches\transforms-3\a00164b5ae1d9d32901118f40dc9524f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\oriol\.gradle\caches\transforms-3\9df30334f425ee5c0230410152fc1166\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\oriol\.gradle\caches\transforms-3\2296292513d00e029ef57d9da7ee42cc\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\oriol\.gradle\caches\transforms-3\2933cf2450006a422e5ecb0ce5636969\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\oriol\.gradle\caches\transforms-3\887830a58f41d5340d9c8d7904d9bc71\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\oriol\.gradle\caches\transforms-3\1b8d629f547fb2868befd81282e00a05\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\oriol\.gradle\caches\transforms-3\96bfdbdb6910b83341af26f205d19fe9\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\oriol\.gradle\caches\transforms-3\33c7c057d1af58ba8f30d984666710f1\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\oriol\.gradle\caches\transforms-3\286866eddbe63648284318507c561cc4\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+=======
 ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:2:1-117:12
 INJECTED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:2:1-117:12
 INJECTED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:2:1-117:12
@@ -55,6 +112,7 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Aqeed\.gradle\ca
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Aqeed\.gradle\caches\transforms-3\96bfdbdb6910b83341af26f205d19fe9\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Aqeed\.gradle\caches\transforms-3\33c7c057d1af58ba8f30d984666710f1\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Aqeed\.gradle\caches\transforms-3\286866eddbe63648284318507c561cc4\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+>>>>>>> bf2762e0b22859a9adce33ec8437d0213c3ae92a
 	package
 		INJECTED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml
 	android:versionName
@@ -74,6 +132,28 @@ ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\m
 	android:name
 		ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:6:22-77
 application
+<<<<<<< HEAD
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:8:5-109:19
+INJECTED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:8:5-109:19
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\oriol\.gradle\caches\transforms-3\21692a3ee692775d1f2bda3c904e66a5\transformed\room-runtime-2.6.1\AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\oriol\.gradle\caches\transforms-3\21692a3ee692775d1f2bda3c904e66a5\transformed\room-runtime-2.6.1\AndroidManifest.xml:23:5-29:19
+MERGED from [com.google.android.material:material:1.9.0] C:\Users\oriol\.gradle\caches\transforms-3\9c2b9b900c4de298fb189924b5b7ed4b\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.material:material:1.9.0] C:\Users\oriol\.gradle\caches\transforms-3\9c2b9b900c4de298fb189924b5b7ed4b\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\oriol\.gradle\caches\transforms-3\c8da0b00cb3dee3582f03f3d60b1ce57\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\oriol\.gradle\caches\transforms-3\c8da0b00cb3dee3582f03f3d60b1ce57\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\oriol\.gradle\caches\transforms-3\d39a1a71cb92445ad924395f05b3b45a\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\oriol\.gradle\caches\transforms-3\d39a1a71cb92445ad924395f05b3b45a\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.9.0] C:\Users\oriol\.gradle\caches\transforms-3\43edc55df3b5c22b93aea8041b6b233a\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] C:\Users\oriol\.gradle\caches\transforms-3\43edc55df3b5c22b93aea8041b6b233a\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:26:5-51:19
+MERGED from [androidx.test:core:1.5.0] C:\Users\oriol\.gradle\caches\transforms-3\ee985323bd50bae98bdc77920fdb7205\transformed\core-1.5.0\AndroidManifest.xml:26:5-51:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\oriol\.gradle\caches\transforms-3\33f5673a7ce4ea52b4f73052faabfed1\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\oriol\.gradle\caches\transforms-3\33f5673a7ce4ea52b4f73052faabfed1\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\oriol\.gradle\caches\transforms-3\074828eb53783e17ddeabfeaeea75130\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\oriol\.gradle\caches\transforms-3\074828eb53783e17ddeabfeaeea75130\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\oriol\.gradle\caches\transforms-3\a00164b5ae1d9d32901118f40dc9524f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\oriol\.gradle\caches\transforms-3\a00164b5ae1d9d32901118f40dc9524f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+=======
 ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:8:5-115:19
 INJECTED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:8:5-115:19
 MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\Aqeed\.gradle\caches\transforms-3\21692a3ee692775d1f2bda3c904e66a5\transformed\room-runtime-2.6.1\AndroidManifest.xml:23:5-29:19
@@ -94,6 +174,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Aq
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Aqeed\.gradle\caches\transforms-3\074828eb53783e17ddeabfeaeea75130\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Aqeed\.gradle\caches\transforms-3\a00164b5ae1d9d32901118f40dc9524f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Aqeed\.gradle\caches\transforms-3\a00164b5ae1d9d32901118f40dc9524f\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+>>>>>>> bf2762e0b22859a9adce33ec8437d0213c3ae92a
 	android:extractNativeLibs
 		INJECTED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml
 	android:appComponentFactory
@@ -105,9 +186,13 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Aqeed\.gradle\cach
 	android:fullBackupContent
 		ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:11:9-54
 	android:roundIcon
+<<<<<<< HEAD
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:14:9-54
+=======
 		ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:14:9-54
 	tools:targetApi
 		ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:17:9-29
+>>>>>>> bf2762e0b22859a9adce33ec8437d0213c3ae92a
 	android:icon
 		ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:12:9-49
 	android:allowBackup
@@ -117,6 +202,27 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Aqeed\.gradle\cach
 	android:dataExtractionRules
 		ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:10:9-65
 activity#com.example.tablemeets.Login
+<<<<<<< HEAD
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:18:9-26:20
+	android:exported
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:20:13-36
+	android:name
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:19:13-34
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:21:13-24:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:22:17-69
+	android:name
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:22:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:23:17-77
+	android:name
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:23:27-74
+activity#com.example.tablemeets.Home
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:28:9-32:20
+	android:label
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:30:13-30
+=======
 ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:19:9-27:20
 	android:exported
 		ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:21:13-36
@@ -134,9 +240,39 @@ ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\m
 		ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:24:27-74
 activity#com.example.tablemeets.AppDatabaseHelper
 ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:29:9-32:20
+>>>>>>> bf2762e0b22859a9adce33ec8437d0213c3ae92a
 	android:exported
 		ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:31:13-36
 	android:name
+<<<<<<< HEAD
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:29:13-33
+activity#com.example.tablemeets.Register
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:34:9-37:20
+	android:exported
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:36:13-36
+	android:name
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:35:13-37
+activity#com.example.tablemeets.ForgotPassword
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:39:9-42:20
+	android:exported
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:41:13-36
+	android:name
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:40:13-43
+activity#com.example.tablemeets.NewEvent
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:44:9-47:20
+	android:exported
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:46:13-36
+	android:name
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:45:13-37
+activity#com.example.tablemeets.TypeOfEvent
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:49:9-53:20
+	android:exported
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:51:13-36
+	android:name
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:50:13-40
+activity#com.example.tablemeets.SearchEvent
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:55:9-58:20
+=======
 		ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:30:13-46
 activity#com.example.tablemeets.Home
 ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:34:9-38:20
@@ -166,9 +302,73 @@ ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\m
 		ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:51:13-37
 activity#com.example.tablemeets.TypeOfEvent
 ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:55:9-59:20
+>>>>>>> bf2762e0b22859a9adce33ec8437d0213c3ae92a
 	android:exported
 		ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:57:13-36
 	android:name
+<<<<<<< HEAD
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:56:13-40
+activity#com.example.tablemeets.Games
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:60:9-63:20
+	android:exported
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:62:13-36
+	android:name
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:61:13-34
+activity#com.example.tablemeets.EventsCreated
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:65:9-68:20
+	android:exported
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:67:13-36
+	android:name
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:66:13-42
+activity#com.example.tablemeets.AttendingEvents
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:70:9-73:20
+	android:exported
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:72:13-36
+	android:name
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:71:13-44
+activity#com.example.tablemeets.Settings
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:75:9-78:20
+	android:exported
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:77:13-36
+	android:name
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:76:13-37
+activity#com.example.tablemeets.Profile
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:80:9-83:20
+	android:exported
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:82:13-36
+	android:name
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:81:13-36
+activity#com.example.tablemeets.EditProfile
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:85:9-88:20
+	android:exported
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:87:13-36
+	android:name
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:86:13-40
+activity#com.example.tablemeets.AboutUs
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:90:9-93:20
+	android:exported
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:92:13-36
+	android:name
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:91:13-36
+activity#com.example.tablemeets.DescriptionCreatedEvent
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:95:9-98:20
+	android:exported
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:97:13-36
+	android:name
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:96:13-52
+activity#com.example.tablemeets.DescriptionAttendingEvent
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:99:9-102:20
+	android:exported
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:101:13-36
+	android:name
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:100:13-54
+activity#com.example.tablemeets.Report
+ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:104:9-107:20
+	android:exported
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:106:13-36
+	android:name
+		ADDED from C:\Users\oriol\Desktop\TableMeets\app\src\main\AndroidManifest.xml:105:13-35
+=======
 		ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:56:13-40
 activity#com.example.tablemeets.SearchEvent
 ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:61:9-64:20
@@ -236,6 +436,7 @@ ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\m
 		ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:112:13-36
 	android:name
 		ADDED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml:111:13-35
+>>>>>>> bf2762e0b22859a9adce33ec8437d0213c3ae92a
 uses-sdk
 INJECTED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\src\main\AndroidManifest.xml
