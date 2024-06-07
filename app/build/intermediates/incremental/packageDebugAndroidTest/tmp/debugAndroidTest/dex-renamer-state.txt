@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 #Fri May 24 13:08:20 CEST 2024
 base.0=C\:\\Users\\oriol\\Desktop\\TableMeets\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
 base.1=C\:\\Users\\oriol\\Desktop\\TableMeets\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
 base.2=C\:\\Users\\oriol\\Desktop\\TableMeets\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\6\\classes.dex
+=======
+#Wed May 15 17:01:38 CEST 2024
+base.0=C\:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
+base.1=C\:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+base.2=C\:\\Users\\Aqeed\\AndroidStudioProjects\\M7-Projects\\TableMeets\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\6\\classes.dex
+>>>>>>> bf2762e0b22859a9adce33ec8437d0213c3ae92a
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=6/classes.dex

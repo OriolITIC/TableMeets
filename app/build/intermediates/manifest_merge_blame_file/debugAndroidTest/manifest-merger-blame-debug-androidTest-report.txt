@@ -3,6 +3,7 @@
 3    package="com.example.tablemeets.test" >
 4
 5    <uses-sdk
+<<<<<<< HEAD
 5-->C:\Users\oriol\Desktop\TableMeets\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest6340973808111604552.xml:5:5-74
 6        android:minSdkVersion="26"
 6-->C:\Users\oriol\Desktop\TableMeets\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest6340973808111604552.xml:5:15-41
@@ -42,6 +43,47 @@
 25        <uses-library android:name="android.test.runner" />
 25-->C:\Users\oriol\Desktop\TableMeets\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest6340973808111604552.xml:8:9-60
 25-->C:\Users\oriol\Desktop\TableMeets\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest6340973808111604552.xml:8:23-57
+=======
+5-->C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest1730549566168162388.xml:5:5-74
+6        android:minSdkVersion="26"
+6-->C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest1730549566168162388.xml:5:15-41
+7        android:targetSdkVersion="33" />
+7-->C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest1730549566168162388.xml:5:42-71
+8
+9    <instrumentation
+9-->C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest1730549566168162388.xml:11:5-15:72
+10        android:name="androidx.test.runner.AndroidJUnitRunner"
+10-->C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest1730549566168162388.xml:11:22-76
+11        android:functionalTest="false"
+11-->C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest1730549566168162388.xml:14:22-52
+12        android:handleProfiling="false"
+12-->C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest1730549566168162388.xml:13:22-53
+13        android:label="Tests for com.example.tablemeets"
+13-->C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest1730549566168162388.xml:15:22-70
+14        android:targetPackage="com.example.tablemeets" />
+14-->C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest1730549566168162388.xml:12:22-68
+15
+16    <queries>
+16-->[androidx.test:runner:1.5.2] C:\Users\Aqeed\.gradle\caches\transforms-3\b1c80f283ef868024ec18a0a602d6345\transformed\runner-1.5.2\AndroidManifest.xml:24:5-28:15
+17        <package android:name="androidx.test.orchestrator" />
+17-->[androidx.test:runner:1.5.2] C:\Users\Aqeed\.gradle\caches\transforms-3\b1c80f283ef868024ec18a0a602d6345\transformed\runner-1.5.2\AndroidManifest.xml:25:9-62
+17-->[androidx.test:runner:1.5.2] C:\Users\Aqeed\.gradle\caches\transforms-3\b1c80f283ef868024ec18a0a602d6345\transformed\runner-1.5.2\AndroidManifest.xml:25:18-59
+18        <package android:name="androidx.test.services" />
+18-->[androidx.test:runner:1.5.2] C:\Users\Aqeed\.gradle\caches\transforms-3\b1c80f283ef868024ec18a0a602d6345\transformed\runner-1.5.2\AndroidManifest.xml:26:9-58
+18-->[androidx.test:runner:1.5.2] C:\Users\Aqeed\.gradle\caches\transforms-3\b1c80f283ef868024ec18a0a602d6345\transformed\runner-1.5.2\AndroidManifest.xml:26:18-55
+19        <package android:name="com.google.android.apps.common.testing.services" />
+19-->[androidx.test:runner:1.5.2] C:\Users\Aqeed\.gradle\caches\transforms-3\b1c80f283ef868024ec18a0a602d6345\transformed\runner-1.5.2\AndroidManifest.xml:27:9-83
+19-->[androidx.test:runner:1.5.2] C:\Users\Aqeed\.gradle\caches\transforms-3\b1c80f283ef868024ec18a0a602d6345\transformed\runner-1.5.2\AndroidManifest.xml:27:18-80
+20    </queries>
+21
+22    <application
+22-->C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest1730549566168162388.xml:7:5-9:19
+23        android:debuggable="true"
+24        android:extractNativeLibs="false" >
+25        <uses-library android:name="android.test.runner" />
+25-->C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest1730549566168162388.xml:8:9-60
+25-->C:\Users\Aqeed\AndroidStudioProjects\M7-Projects\TableMeets\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest1730549566168162388.xml:8:23-57
+>>>>>>> bf2762e0b22859a9adce33ec8437d0213c3ae92a
 26    </application>
 27
 28</manifest>
